@@ -24,7 +24,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-md nav-up">
             <!-- colapsara en md-->
-            <div class="container-fluid   d-flex">
+            <div class="container-fluid d-flex">
                 <!--costado a costado-->
                 <a class="navbar-brand" href="#">
                     <img class="rounded-circle align-items-center" src="img/morty3.png" alt="logo">
@@ -63,7 +63,7 @@
                             <a class="nav-link active" href="#"> Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Personajes</a>
+                            <a class="nav-link" href="index2.html"> Personajes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Capitulos</a>
@@ -106,7 +106,8 @@
                                 <p class="card-text"> Status:
                                     {{i.status}}
                                 </p>
-                                <button v-on:click="add(i.id)" id="next-button">add</button>
+                                <button v-on:click="get(i.id)" id="next-button">add</button>
+                                <button v-on:click="add3(i.id,1)" id="next-button">add2</button>
                             </div>
                         </div>
                     </div>
@@ -114,6 +115,7 @@
 
                 <button v-on:click="siguiente()" id="next-button">Next</button>
                 <button v-on:click="atras()" id="back-button">Back</button>
+                <button v-on:click="get()" id="back-button">Hola <span></span> </button>
                 
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,8 +132,8 @@
                                     <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
                                     <div v-for="i in items">
                                         <div class="card card-char" id="1">
-                                            <span id="id">{{i.name}}</span>
-                                            <div class="card-status-char text-center rounded-circle">{{i.status}}</div>
+                                            <span id="id">{{i.stock}}</span>
+                                            <div class="card-status-char text-center rounded-circle">{{i.id}}</div>
                                             <div id="name" class="card-title-char text-center">{{i.name}}</div>
                                             <div class="card-status-char text-center rounded-circle">{{i.status}}</div>
                                             <div class="card-image">
