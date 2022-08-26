@@ -1,0 +1,18 @@
+:root{
+    --color-one: rgb(202, 191, 171);
+    --color-two: rgb(223, 216, 200);
+    --color-three: rgb(65, 68, 75);
+    --color-four: rgb(82, 87, 93);
+    --letter-white: rgba(255, 255, 255, 0.986);
+
+    --color-five: rgb(34, 87, 122);
+    --color-six: rgb(56, 163, 165);
+    --color-seven: rgb(87, 204, 153);
+    --color-eight: rgb(128, 237, 153);
+
+    --color-nine: rgb(62, 199, 11);
+    --color-ten: rgb(161, 73, 250);
+    --color-eleven: rgb(251, 223, 7);
+
+    --gradiant-one: linear-gradient(to right, #78ffd6, #a8ff78);
+}
