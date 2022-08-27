@@ -16,6 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal-mazo.css">
     <link rel="stylesheet" href="css/color-var.css">
 </head>
 
@@ -95,24 +96,30 @@
                 <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
                     <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
                     <div v-for="i in filterSearch" :key="i.id">
-                        <div class="card card-char" id="card-char">
-                            <span id="id">{{i.id}}</span>
-                            <div class="card-status-char text-center rounded-circle">{{i.status}}</div>
-                            <div id="name" class="card-title-char text-center">{{i.name}}</div>
-                            <div class="card-status-char text-center rounded-circle">{{i.status}}</div>
-                            <div class="card-species-char text-center rounded-circle">{{i.origin.name}}</div>
-                            <div class="card-image">
-                                <img class="card-img-top" :src="i.image">
+                        <div class="">
+
+                            <div class=" card card-char absolute m-4">
+                                <span id="id">{{i.id}}</span>
+                                <div class="card-status-char text-center rounded-circle">
+                                    {{i.status}}</div>
+                                <div id="name" class="card-title-char text-center">{{i.name}}</div>
+                                <div class="card-status-char text-center rounded-circle">
+                                    {{i.status}}</div>
+
+                                <div class="card-image">
+                                    <img class="card-img-top" :src="i.image">
+                                </div>
+                                <div class="card-body-char ">
+                                    <p class="card-title"><strong>{{i.name}}</strong></p>
+                                    <p class="card-text"> Status:
+                                        {{i.status}}
+                                    </p>  
+                                </div>
+                                <a v-on:click="add3(i.id,1)" class="add-deck-btn position-absolute rounded-circle "><i class="bi bi-plus-circle-fill"></i></a>
                             </div>
-                            <div class="card-body-char ">
-                                <p class="card-title"><strong>{{i.name}}</strong></p>
-                                <p class="card-text"> Status:
-                                    {{i.status}}
-                                </p>
-                                <button v-on:click="get(i.id)" id="next-button">add</button>
-                                <button v-on:click="add3(i.id,1)" id="next-button">add2</button>
-                            </div>
+
                         </div>
+
                     </div>
                 </div>
                 <nav aria-label="Page navigation example">
@@ -125,7 +132,7 @@
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-xl " role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -136,24 +143,89 @@
                             <div class="modal-body">
                                 <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
                                     <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
+                                   <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
                                     <div v-for="i in items">
-                                        <div class="card card-char" id="1">
-                                            <span class="card-qty" id="id">{{i.stock}}</span>
-                                            <div class="card-status-char text-center rounded-circle">{{i.id}}</div>
-                                            <div id="name" class="card-title-char text-center">{{i.name}}</div>
-                                            <div class="card-status-char text-center rounded-circle">{{i.status}}</div>
-                                            <div class="card-image">
-                                                <img class="card-img-top" :src="i.image">
-                                            </div>
-                                            <div class="card-body-char ">
-                                                <p class="card-title"><strong>{{i.name}}</strong></p>
-                                                <p class="card-text"> Status:
-                                                    {{i.status}}
-                                                </p>
-                                            </div>
 
+                                        <div v-if=" i.stock == 1">
+                                            <div class=" card-modal-margin" >
+
+                                                <div class=" card card-char absolute card-char-modal">
+                                                    <span id="id">{{i.stock}}</span>
+                                                    
+                                                    <div id="name" class="modal-card-title-char text-center">{{i.name}}</div>
+                                                    <div class="modal-card-status-char text-center rounded-circle">
+                                                        {{i.status}}</div>
+    
+                                                    <div class="modal-card-image">
+                                                        <img class="card-img-top" :src="i.image">
+                                                    </div>
+                                                    <div class="modal-card-body-char">
+                                                        <p class="card-title"><strong>{{i.name}}</strong></p>
+                                                        <p class="card-text"> Status:
+                                                            {{i.status}}
+                                                        </p>
+                                                      
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <div v-else-if=" i.stock ==2">
+                                            <div class=" card-modal-margin" >
+                                                <span class="card-capa-3 card-char-modal"></span>
+                                                <div class=" card card-char absolute card-char-modal">
+                                                    <span id="id">{{i.stock}}</span>
+                                                    
+                                                    <div id="name" class="modal-card-title-char text-center">{{i.name}}</div>
+                                                    <div class="modal-card-status-char text-center rounded-circle">
+                                                        {{i.status}}</div>
+    
+                                                    <div class="modal-card-image">
+                                                        <img class="card-img-top" :src="i.image">
+                                                    </div>
+                                                    <div class="modal-card-body-char">
+                                                        <p class="card-title"><strong>{{i.name}}</strong></p>
+                                                        <p class="card-text"> Status:
+                                                            {{i.status}}
+                                                        </p>
+                                                        <div class="qty-modal-char text-center align-items-center rounded-circle">
+                                                            <p class="bold-text text-center modal-text-qty">X{{i.stock}}</p></div>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div v-else>
+                                            <div class=" card-modal-margin" >
+                                                <span class="card-capa-2 card-char-modal"></span>
+                                                <span class="card-capa-3 card-char-modal"></span>
+                                                <div class=" card card-char absolute card-char-modal">
+                                                    <span id="id">{{i.stock}}</span>
+                                                    
+                                                    <div id="name" class="modal-card-title-char text-center">{{i.name}}</div>
+                                                    <div class="modal-card-status-char text-center rounded-circle">
+                                                        {{i.status}}</div>
+    
+                                                    <div class="modal-card-image">
+                                                        <img class="card-img-top" :src="i.image">
+                                                    </div>
+                                                    <div class="modal-card-body-char">
+                                                        <p class="card-title"><strong>{{i.name}}</strong></p>
+                                                        <p class="card-text"> Status:
+                                                            {{i.status}}
+                                                        </p>
+                                                        <div class="qty-modal-char text-center align-items-center rounded-circle">
+                                                            <p class="bold-text text-center modal-text-qty">X{{i.stock}}</p></div>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
+                                   </div>
                                 </div>
                                 <button v-on:click="clear()" id="next-button">Clear all</button>
                             </div>
