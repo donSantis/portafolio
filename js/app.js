@@ -7,7 +7,8 @@ let a = new Vue({
       meta: null,
       characters: [],
       character: {},
-      items: []
+      items: [],
+      pages: null
     }
   },
   mounted() {
@@ -20,7 +21,8 @@ let a = new Vue({
         .get('https://rickandmortyapi.com/api/character/')
         .then(response => (
           this.characters = response.data.results,
-          this.meta = response.data.info
+          this.meta = response.data.info,
+          this.pages = response.data.info.pages
         ))
         .catch(e => {
           console.log(e)

@@ -34,6 +34,9 @@
                     <i class="bi bi-radioactive"></i>
                 </button> <!--  Boton del menu-->
                 <!-- Menu collapse-->
+                <div class="input-group">
+
+                </div>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto m-2 ">
                         <li class="nav-item">
@@ -84,11 +87,11 @@
 
     <main class="container">
 
-
         <section class="content-1 alto-500">
-            <div id="app" class="container">
-                <h2 class="titulo-container"> Personajes</h2>
-                <input type="text" v-model="search" placeholder="Search">
+            <div id="app" class="container containers-char my-5">
+                <h2 class="titulo-container text-center my-4"> Personajes</h2>
+                <input v-model="search" type="search" class="form-control rounded search my-5"
+                    placeholder="Rick Sanch...." aria-label="Search" aria-describedby="search-addon" />
                 <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
                     <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
                     <div v-for="i in filterSearch" :key="i.id">
@@ -112,11 +115,14 @@
                         </div>
                     </div>
                 </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li v-on:click="atras()" class="page-item"><a class="page-link" href="#">Back</a></li>
+                        <li v-on:click="siguiente()" class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <p>{{pages}}</p>
+                    </ul>
+                </nav>
 
-                <button v-on:click="siguiente()" id="next-button">Next</button>
-                <button v-on:click="atras()" id="back-button">Back</button>
-                <button v-on:click="get()" id="back-button">Hola <span></span> </button>
-                
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -132,7 +138,7 @@
                                     <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
                                     <div v-for="i in items">
                                         <div class="card card-char" id="1">
-                                            <span id="id">{{i.stock}}</span>
+                                            <span class="card-qty" id="id">{{i.stock}}</span>
                                             <div class="card-status-char text-center rounded-circle">{{i.id}}</div>
                                             <div id="name" class="card-title-char text-center">{{i.name}}</div>
                                             <div class="card-status-char text-center rounded-circle">{{i.status}}</div>
@@ -144,7 +150,6 @@
                                                 <p class="card-text"> Status:
                                                     {{i.status}}
                                                 </p>
-                                                <button v-on:click="get(i.id)" id="next-button">add</button>
                                             </div>
 
                                         </div>
@@ -161,29 +166,14 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
         <section class="content-4 alto-500">
             <div class="container " id="app3">
                 <div class="menu">
                     <div id="store-container">
 
                     </div>
-
-
-
                 </div>
             </div>
-            <!-- Button trigger modal -->
-
-
-            <!-- Modal -->
-
         </section>
 
         <aside class="sidebar">
@@ -195,15 +185,12 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </footer>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
