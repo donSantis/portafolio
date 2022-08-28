@@ -8,7 +8,8 @@ let a = new Vue({
       characters: [],
       character: {},
       items: [],
-      pages: null
+      pages: null,
+      totalCardDeckvar: "0"
     }
   },
   mounted() {
@@ -65,28 +66,38 @@ let a = new Vue({
     add3(id, stock) {
       const cartItem = this.getItemsCart(id);
       if (cartItem) {
-          cartItem.stock++;
+        cartItem.stock++;
+        this.totalCardDeck()
       } else {
-
-        
         let card = {};
-      let db = axios.get('https://rickandmortyapi.com/api/character/' + id);
-      db.then(response => (
-        card = {
-          id: response.data.id,
-          name: response.data.name,
-          image: response.data.image,
-          stock: stock,
-        },
+        let db = axios.get('https://rickandmortyapi.com/api/character/' + id);
+        db.then(response => (
+          card = {
+            id: response.data.id,
+            name: response.data.name,
+            image: response.data.image,
+            stock: stock,
+          },
 
-        this.items.push(
-          card
-        ),
-        console.log(this.items)
+          this.items.push(
+            card
+          ),
+          this.totalCardDeck()
 
-      ))
+        ))
       }
-      console.log(this.items)
+
+    },
+    totalCardDeck() {
+
+      let total = 0;
+      this.items.forEach((item) => {
+        const found = this.getItemsCart(item.id);
+        total += found.stock;
+      });
+
+      this.totalCardDeckvar = total;
+
     }
     ,
     getItemsCart(id) {
@@ -96,11 +107,12 @@ let a = new Vue({
     }
 
     ,
-    hasInventory (id, stock)  {
+    hasInventory(id, stock) {
       return this.items.find((item) => item.id === id).stock - stock >= 0;
     },
     clear() {
       this.items = [];
+      this.totalCardDeck()
     }
   },
   computed: {

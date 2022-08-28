@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/modal-mazo.css">
     <link rel="stylesheet" href="css/color-var.css">
+    <link rel="stylesheet" href="css/button-deck.css">
 </head>
 
 <body>
@@ -46,9 +47,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"> log</a>
                         </li>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            MAzo
-                        </button>
+                        
+                        
                     </ul>
                 </div>
             </div>
@@ -58,7 +58,7 @@
 
         <nav class="navbar navbar-expand-md nav-down ">
             <!-- colapsara en md-->
-            <div class="container-fluid d-flex sticky-top">
+            <div class="container-fluid d-flex ">
                 <!--costado a costado-->
                 <!-- Menu collapse-->
                 <div class="collapse navbar-collapse" id="menu">
@@ -133,13 +133,10 @@
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl " role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                        <div class="modal-content modal-body-deck">
                                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
+                   
+                 
                             <div class="modal-body">
                                 <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
                                     <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
@@ -229,13 +226,11 @@
                                 </div>
                                 <button v-on:click="clear()" id="next-button">Clear all</button>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
+       
                         </div>
                     </div>
                 </div>
+                <button type="button" class="btn btn-primary  button-deck " data-toggle="modal" data-target="#exampleModal"> <span> {{totalCardDeckvar}}</span></button>
             </div>
         </section>
         <section class="content-4 alto-500">

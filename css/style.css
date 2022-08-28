@@ -15,14 +15,14 @@ header {
     a img {
         
         border: 2px solid var(--letter-white);
-        background-image: url("C:/Users/santi/OneDrive/Escritorio/portafolio git/CONTAINERS/img/morty2.png");
+        background-image: url("../img/morty2.png");
         background-repeat: no-repeat;
         background-color: var(--color-eigth);
         transition: 2s;
     }
 
     a img:hover {
-        background-image: url("C:/Users/santi/OneDrive/Escritorio/portafolio git/CONTAINERS/img/morty.png");
+        background-image: url("../img/morty.png");
         box-shadow: 5px 10px 18px var(--color-ten);
     }
 
@@ -58,7 +58,7 @@ header {
         border-left-radius: 0px;
         position: relative;
         margin: 10px;
-        background-image: url("C:/Users/santi/OneDrive/Escritorio/portafolio git/CONTAINERS/img/textura4.jpg");
+        background-image: url("../img/textura4.jpg");
         filter: brightness(90%)!important;
         transition: 1s ease;
         z-index: 5;
@@ -74,7 +74,7 @@ header {
         border-left-radius: 0px;
         position: relative;
         margin: 10px;
-        background-image: url("C:/Users/santi/OneDrive/Escritorio/portafolio git/CONTAINERS/img/textura1.jpg");
+        background-image: url("../img/textura1.jpg");
         filter: brightness(90%);
         transition: 1s ease;
         z-index: 5;
