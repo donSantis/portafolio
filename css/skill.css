@@ -1,0 +1,179 @@
+.content-welcome{
+    height: 800px;
+}
+
+.general-box{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px -8px #2187e7;
+    background:#000;
+
+}
+ 
+.title-about{
+    
+        font-size: 2.7em;
+        font-weight: normal;
+        padding: 10px 0 16px 0;
+        margin: 0 0 0px;
+        text-align:center;
+        color:#2187e7;
+        text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #2187e7;
+        border-radius:2px;
+      
+}
+
+
+.p-about{
+    
+    color: #FFFF;
+    padding: 10px 10px 16px 0;
+    margin: 0 30px 0px;
+    text-align:center;
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+}
+
+
+.about-container{
+    height: 250px;
+    animation: down 2s forwards;
+    left: 140px;
+}
+
+.about-container-negative {
+    height: 250px;
+    animation: down 2s forwards;
+    left: 140px;
+    display: none;
+}
+
+.perfil-container-negative {
+    height: 250px;
+    animation: down 2s forwards;
+    left: 140px;
+    display: none;
+}
+
+.skill-container-negative {
+    height: 250px;
+    animation: down 2s forwards;
+    left: 140px;
+    display: none;
+}
+
+.about-container::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 120%;
+    height: 120%;
+    background: url(../img/metal-mark7.png) center no-repeat;
+    position: absolute;
+    top: -35px;
+    left: -55px;
+    transform: rotate(180deg);
+  }
+
+
+
+.perfil-container{
+    height: 250px;
+    animation: show-right 2s forwards;
+    right: 165px;
+}
+
+.perfil-container::after {
+    content: '';
+    display: block;
+    width: 150%;
+    height: 150%;
+    background: url(../img/metal-arm.png) center no-repeat;
+    position: absolute;
+    top: -120px;
+    right: -200px;
+    
+  }
+
+
+.skill-container{
+    height: 230px;
+    animation: up 2s forwards;
+}
+
+.skill-container::before {
+    content: '';
+    display: block;
+    width: 101%;
+    height: 21px;
+    background: url(../img/dividerlarge.png) center no-repeat;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px red;
+  }
+
+  .skill-container::after {
+    content: '';
+    display: block;
+    width: 101%;
+    height: 21px;
+    background: url(../img/dividerlarge.png) center no-repeat;
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px red;
+  }
+
+
+
+
+
+
+@keyframes down {
+    from{
+        transform: translateY(-1000px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes up {
+    from{
+        transform: translateY(1000px);
+    }
+    to{
+        transform: translateY(300px);
+        
+    }
+}
+
+@keyframes show-left {
+    from{
+        transform: translateX(-1000px);
+    }
+    to{
+        transform: translateX(-215px);
+        
+    }
+}
+
+@keyframes show-right {
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(-15px);
+        
+    }
+}
+
+
+
+
+
+
+
+

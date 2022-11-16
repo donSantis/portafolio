@@ -1,0 +1,67 @@
+ 
+
+.carousel-caption{
+    top: 60px;
+    left: 50px;
+    text-align: justify;
+    
+}
+
+.carousel-caption-title{
+    font-size: 100px;
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+}
+
+.btn-comenzar{
+    position: absolute;
+    right: 0px;
+    height: 250px;
+    width: 250px;
+    font-size: 75px;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.btn-comenzar:hover{
+
+    height: 250px;
+    width: 250px;
+    box-shadow: 0px 0px 30px #240b36;
+  
+}
+
+
+
+
+.parpadea {
+    
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }

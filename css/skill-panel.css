@@ -1,0 +1,153 @@
+/* TARJETA PRINC */
+.skill-card{
+    height: 900px;
+    background-repeat:no-repeat;   
+    background-position: center center;
+    background-image: url("../img/fondoportafol1902.jpg");
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 30px; margin-bottom: 80px;
+    color: #FFFF;
+    box-shadow: 0px 0px 40px #FFFF;
+}
+
+.skill-text-content{
+    border-top:4px  solid white;
+    border-bottom:4px  solid white;
+    padding: 30px 0px 30px 0px;
+}
+
+.skill-title-content{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+    font-size: 60px;
+}
+
+.skill-title-content-2{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #6d21e7, 0 0 20px #ffff;
+    font-size: 60px;
+}
+/* HEXAGONOS */
+.hexa-wrap {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  }
+
+  .hexa-wrap:hover {
+    filter: drop-shadow(-1px 6px 3px rgba(234, 3, 255, 0.664));
+  }
+
+.hexa-card{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background-repeat:no-repeat;   
+    background-position: center center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: #FFFF;
+    margin:10px 20px 10px 20px;
+
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    z-index:998;
+}
+/* EFECTO HEXAGONOS */
+.hexa-card:hover{
+    width: 150px;
+    height: 105px;
+    z-index:999;
+    
+}   
+
+
+
+/* IMAGENES lenguajes */
+.hex-l1{
+    top: 0px;
+    background-image: url("../img/csslogo.png");
+}
+
+.hex-l2{
+    background-image: url("../img/htmllogo.png");  
+    top:80px;
+}
+
+.hex-l3{
+    background-image: url("../img/phplogo.png");
+    top: 160px;
+}
+
+.hex-l4{
+    background-image: url("../img/MySQL-logo.png");
+    top: 240px;
+  
+}
+.hex-l5{
+    background-image: url("../img/JavaScript_logo_2.png");
+    top: 320px;
+}
+
+
+
+/* IMAGENES herramientas */
+.hex-h1{
+    background-image: url("../img/logo-GitHub.png");
+    top: 0px;
+}
+
+.hex-h2{
+    background-image: url("../img/figma.png");  
+    top: 80px;
+}
+
+.hex-h3{
+    background-image: url("../img/bitbucketlogo.png");
+    top: 160px;
+}
+
+.hex-h4{
+    background-image: url("../img/PhpStorm_Icon.png");
+    top: 240px;
+  
+}
+.hex-h5{
+    background-image: url("../img/scrum.png");
+    top: 320px;
+}
+
+.hex-h6{
+    background-image: url("../img/Logo-cpanel.png");
+    top: 400px;
+  
+}
+ 
+
+/* IMAGENES FRAMEWORK */
+
+.hex-f1{
+    background-image: url("../img/WordPress-logotype.png");
+    top: 0px;
+}
+
+.hex-f2{
+    background-image: url("../img/laravel-logo.png");  
+    top: 80px;
+}
+
+.hex-f3{
+    background-image: url("../img/vuelogo.png");
+    top: 160px;
+}
+
+.hex-f4{
+    background-image: url("../img/boostraplogo.png");
+    top: 240px;
+  
+}
+.hex-f5{
+    background-image: url("../img/ioniclogo.png");
+    top: 320px;
+}
+
+ 
+ 
+ 

@@ -1,0 +1,62 @@
+.app-section-1{
+    height: 600px;
+    background-repeat:no-repeat;   
+    background-position: center center;
+    background-image: url("../img/rick&back.jpeg");
+    box-shadow: 0px 0px 30px var(--color-twelve);
+}
+
+.buton-app-1 {
+    top: 70%;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 75px;
+    color: #FFFF;
+    border: 2px solid #FFFF;
+    box-shadow: 0px 0px 30px var(--color-nine);
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    z-index:998;
+}
+
+.buton-app-1:hover {
+    box-shadow: 0px 0px 60px var(--color-nine);
+    
+}   
+
+
+.app-section-2{
+    height: 600px;
+    background-repeat:no-repeat;   
+    background-position: center center;
+    background-image: url("../img/pokebackground.jpg");
+    box-shadow: 0px 0px 30px var(--color-five);
+}
+
+.buton-app-2 {
+    top: 70%;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 75px;
+    color: #FFFF;
+    border: 2px solid #FFFF;
+    box-shadow: 0px 0px 30px var(--color-twelve);
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    z-index:998;
+    background-color: var(--color-twelve);
+}
+
+.buton-app-2:hover {
+    box-shadow: 0px 0px 60px var(--color-twelve);
+    
+}
+
+.title-app{
+    font-size: 300px;
+    color: #FFFF;
+}

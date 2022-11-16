@@ -1,0 +1,10 @@
+.spn-img-perfil{
+    height: 200px;
+    width: 200px;
+    background-image: url("../img/ozaru.jpg");
+    background-repeat:no-repeat;   
+    background-position: center center;
+    margin: 10px auto 5px auto;
+    box-shadow: 0px 0px 30px -8px #21e732;
+    
+}
