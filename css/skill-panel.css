@@ -1,37 +1,64 @@
 /* TARJETA PRINC */
 .skill-card{
+    position: relative;
     height: 900px;
     background-repeat:no-repeat;   
     background-position: center center;
-    background-image: url("../img/fondoportafol193.jpg");
     border-radius: 0px 0px 10px 10px;
     margin-top: 30px; margin-bottom: 80px;
     color: #FFFF;
-    box-shadow: 0px 0px 40px #FFFF;
+    border-bottom:1px  solid rgb(9, 255, 0);
+    background: rgba(9, 255, 0, 0.219);
+    
 }
 
+
+.skill-card::before {
+    content: '';
+    display: block;
+    width: 101%;
+    height: 25px;
+    top: -10px;
+    background: url(../img/dividerxxl.jpg) center no-repeat;
+    position: absolute;
+    border-radius: 20px;
+  }
+
+  .skill-card::after {
+    content: '';
+    display: block;
+    width: 101%;
+    height: 25px;
+    background: url(../img/dividerxxl.jpg) center no-repeat;
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    border-radius: 20px;
+  }
+
+
+
+
+
+
+
 .skill-text-content{
-    border-top:4px  solid white;
-    border-bottom:4px  solid white;
+    border-top:1px  solid rgb(9, 255, 0);
+    border-bottom:1px  solid rgb(9, 255, 0);
     padding: 30px 0px 30px 0px;
 }
 
-.skill-title-content{
-    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+.skill-panel-txt{
     font-size: 60px;
 }
 
-.skill-title-content-2{
-    text-shadow: 1px 1px 5px #000, 0 0 10px #6d21e7, 0 0 20px #ffff;
-    font-size: 60px;
-}
 /* HEXAGONOS */
 .hexa-wrap {
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
   }
 
   .hexa-wrap:hover {
-    filter: drop-shadow(-1px 6px 3px rgba(234, 3, 255, 0.664));
+    filter: drop-shadow(-1px 6px 3px var(--color-chicago-red));
   }
 
 .hexa-card{
@@ -55,6 +82,7 @@
     width: 150px;
     height: 105px;
     z-index:999;
+    
     
 }   
 
@@ -148,6 +176,46 @@
     top: 320px;
 }
 
- 
- 
- 
+
+
+
+
+  /* RESPONsivE */
+
+  @media (max-width: 1280px) {
+     
+  }
+
+
+  @media (max-width: 1024px) {
+    .skill-panel-txt{
+        text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+        font-size: 40px;
+    }
+    
+  }
+
+  @media (max-width: 800px) {
+    .skill-panel-txt{
+        text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+        font-size: 30px;
+    }
+    
+
+  }
+
+  @media (max-width: 600px) {
+    .skill-panel-txt{
+        text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+        font-size: 20px;
+    }
+
+  }
+
+  @media (max-width: 460px) {
+    .skill-panel-txt{
+        text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+        font-size: 15px;
+    }
+
+  }

@@ -1,0 +1,20 @@
+.navbar-style{
+    padding: 10px 20px 0px 20px ;
+    font-size: 30px;
+    background-color: var(--color-black-mate);
+    text-decoration: none;
+}
+
+.navbar-down{
+    background-color: var(--color-mate-black);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px var(--color-shadow);
+    display: none;
+}
+
+.social-media{
+    font-size: 20px;
+    padding: 10px 10px 0px 20px ;
+}
+
+

@@ -1,0 +1,102 @@
+
+.carousel-section-1{
+   top: 60px;
+   left: 60px;
+}
+.carousel-section-2{
+  bottom: 25%;
+  left: 35%;
+  transform: rotate(270deg);
+  font-size: 15rem;
+
+}
+
+.carousel-section-2:hover{
+  box-shadow: inset 100px 0 0 0 gold;
+  color: white;
+}
+
+.btn-start:hover{
+  text-shadow: 1px 1px 5px #000, 0 0 10px #000, 0 0 20px #ffff;
+
+}
+
+.charge-efect {
+  margin: 5px;
+  box-shadow: inset 0 0 0 0 gold;
+
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.charge-efect:hover {
+  box-shadow: inset 1100px 0 0 0 red;
+  color: white;
+  
+}
+
+
+
+.parpadea {
+    
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+
+
+
+
+  /* RESPONsivE */
+
+  @media (max-width: 1280px) {
+    .carousel-section-2{
+      font-size: 13rem;
+    
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .carousel-section-2{
+      font-size: 10rem;
+    
+    }
+  }
+
+  @media (max-width: 800px) {
+    .carousel-section-2{
+      font-size: 7rem;
+    
+    }
+  }
+
+  @media (max-width: 600px) {
+    .carousel-section-2{
+      font-size: 5rem;
+    
+    }
+  }

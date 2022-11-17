@@ -1,0 +1,72 @@
+.banner-app{
+    height: 300px;
+    background: var(--color-mate-black);
+    position: relative;
+    letter-spacing: 5rem;
+}
+
+
+.banner-app::before {
+    content: '';
+    display: block;
+    width: 101%;
+    height: 21px;
+    background: url(../img/dividerxxlmetal.png) center no-repeat;
+    position: absolute;
+    top: -14px;
+    left: -5px;
+    border-radius: 20px;
+  }
+
+  .banner-app::after {
+    content: '';
+    display: block;
+    width: 101%;
+    height: 21px;
+    background: url(../img/dividerxxlmetal.png) center no-repeat;
+    position: absolute;
+    bottom: -14px;
+    left: -5px;
+    border-radius: 20px;
+    transform: rotate(180deg);
+  }
+
+
+
+
+
+
+
+
+
+  
+
+  /* RESPONsivE */
+
+  @media (max-width: 1280px) {
+ .banner-app{
+    letter-spacing: 4rem;
+}
+  }
+
+
+  @media (max-width: 1024px) {
+   .banner-app{
+ 
+    letter-spacing: 3rem;
+}
+  }
+
+  @media (max-width: 800px) {
+ .banner-app{
+
+    letter-spacing: 2rem;
+}
+  }
+
+  @media (max-width: 600px) {
+ .banner-app{
+ 
+    letter-spacing: 1rem;
+}
+  }

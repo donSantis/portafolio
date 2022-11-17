@@ -1,28 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
-.footer-content{
-    box-shadow: 0px 0px 20px 10px var(--color-nine);  
-    font-family: 'Inconsolata', monospace;
-    background: var(--gradiant-one); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 3px 3px 0px 0px ;   
-    color: var(--color-c1);
-    font-size: 20px;
-}
 
-.footer-copyright{
+.divider-danger{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 15px;
+    background: url(../img/dividerxxl.jpg) center no-repeat;
+    position: absolute;
     
-    color: var(--color-c1);
+    
 }
 
-.p-footer{
-    color: var(--color-five);
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-    font-weight: bold;
+.footer-content{
+    background-color: var(--color-black-mate); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    box-shadow: 0px 0px 15px #FFFF;
+}
+ 
+.footer div li a{
+    color: white;
+    margin: 5px;
+    box-shadow: inset 0 0 0 0 gold;
+  
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.footer div li a:hover {
+    box-shadow: inset 1100px 0 0 0 red;
+    color: white;
+    
+  }
+
+.list-inline-item a{
+    color: var(--color-white);
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
 }
 
-.title-footer{
-    color: var(--color-c1);
-    font-family: 'Inconsolata', monospace;
-    font-size: 30px;
-    font-weight: bold;
+.list-inline-item a:hover{
+    color: var(--color-chicago-red);
+    text-shadow: 1px 1px 5px #000, 0 0 10px var(--color-chicago-red), 0 0 20px #ffff;
+}
+
+.footer-copyright a{
+    color: var(--color-chicago-red);
+    text-shadow: 1px 1px 5px #000, 0 0 10px var(--color-chicago-red), 0 0 20px #ffff;
 }
