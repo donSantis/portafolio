@@ -15,36 +15,67 @@
         integrity="sha512-EzrsULyNzUc4xnMaqTrB4EpGvudqpetxG/WNjCpG6ZyyAGxeB6OBF9o246+mwx3l/9Cn838iLIcrxpPHTiygAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner-home.css">
+    <link rel="stylesheet" href="css/banner-app.css">
+
+
+
+    <link rel="stylesheet" href="css/banner-end.css">
+    <link rel="stylesheet" href="css/footer.css">
+
     <link rel="stylesheet" href="css/menu-nav.css">
     <link rel="stylesheet" href="css/principal-content.css">
+    <link rel="stylesheet" href="css/imp-perfil.css">
     <link rel="stylesheet" href="css/second-content.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/skill-panel.css">
+    <link rel="stylesheet" href="css/containers.css">
+    <link rel="stylesheet" href="css/carousel-item.css">
+
+    <link rel="stylesheet" href="css/color-var.css">
+
+    <link rel="stylesheet" href="css/app-section.css">
+
+
 </head>
 
 <body class="   ">
 
-    <nav class="navbar navbar-style justify-content-between text-uppercase letra-blanco">
-        <span class="nav-brand letra-blanco">Santis</span>
+    <nav class="navbar navbar-style justify-content-between text-uppercase white-txt">
 
-        <div class="nav-menu letra-blanco">
-            <a class="letra-blanco" href="#">Inicio</a>
-            <a class="letra-blanco" href="#">Acerca</a>
-            <a class="letra-blanco" href="#">Skills</a>
+
+        <span class="nav-brand white-txt shadow-white-txt">Santis</span>
+
+        <button class="d-sm-block d-md-none navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarop"
+            aria-controls="navbarop" aria-expanded="true" aria-label="Toggle navigation"
+            style="color:white; border: 2px solid white; ">
+            <i class="bi bi-list"></i>
+        </button>
+
+
+
+        <div class="collapse navbar-collaps nav-menu d-md-block white-txt" id="navbarop">
+            <a class="white-txt hover-green-txt " href="#">Inicio</a>
+            <a class="white-txt hover-green-txt" href="#">Acerca</a>
+            <a class="white-txt hover-green-txt" href="#">Skills</a>
         </div>
         <div class="social-media  ">
 
             <ul class="list-unstyled list-inline   ">
                 <li class="list-inline-item ">
-                    <a class="btn-floating btn-fb waves-effect waves-light letra-blanco ">
+                    <a class="btn-floating btn-fb waves-effect waves-light white-txt  hover-green-txt shadow-white-txt">
                         <i class="bi bi-facebook "> </i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-tw waves-effect waves-light letra-blanco">
+                    <a class="btn-floating btn-tw waves-effect waves-light white-txt hover-green-txt shadow-white-txt">
                         <i class="bi bi-twitter"> </i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-li waves-effect waves-light letra-blanco">
+                    <a class="btn-floating btn-li waves-effect waves-light white-txt hover-green-txt shadow-white-txt">
                         <i class="bi bi-linkedin"> </i>
                     </a>
                 </li>
@@ -52,135 +83,265 @@
             </ul>
         </div>
 
+
     </nav>
 
 
-    <nav class="  navbar-style navbar-down fixed-top text-center  letra-blanco  container my-2" id="navbar-down">
+    <nav class="  navbar-style navbar-down fixed-top text-center shadow-box  white-txt  container my-2"
+        id="navbar-down">
         <span class="barra mx-2"><a href="#">Inicio </a></span>
         <span class="barra mx-2"><a href="#">Acerca </a></span>
         <span class="barra mx-2"><a href="#">Contact </a></span>
     </nav>
 
+    <div class="banner-home position-relative d-flex" id="home">
+        <img class="d-block w-100 img-class" src="img/poly-japo.jpg" alt="First slide">
+        <div class="row">
+            <div class="carousel-section-1 text-left position-absolute col-8">
+                <h2 class="display-1 white-txt shadow-white-txt">Bienvenido<span class="parpadea"><strong>_</strong>
+                </h2>
+                <p class="white-txt shadow-black-txt">Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi
+                    porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
 
-    <div class="container">
-
-
-
-        <div class="principal-content d-flex  align-items-center">
-
-            <div class="first-content-left-side col-6">
-                <h1>Hola mi nombre es Ivan Santis </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam dolorem et aspernatur
-                    libero
-                    consequuntur.</p>
             </div>
+            <div class="carousel-section-2 text-left position-absolute">
+                <p class="btn-start d-flex align-items-center rounded-circle justify-content-center">
+                    <a class=" charge-efect white-txt shadow-white-txt" href="#habilidades" role="button">START</a>
+                </p>
+            </div>
+        </div>
 
-            <div class="first-content-rigth-side col-6  ">
-                <div class="img-container   text-center">
-                    <img class="img-present rounded-circle " src="img/ozaru.jpg" alt="">
+    </div>
+
+
+    <div class="banner-app mt-5 shadow-yellow d-flex align-items-center justify-content-center ">
+        <h3 class="display-1 white-txt shadow-white-txt">PROYECTOS</h3>
+    </div>
+
+
+    <!--
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active  ">
+                <img class="d-block w-100 img-class" src="img/poly-japo.jpg" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h2 class="display-1 shadow-white-txt">Bienvenido<span class="parpadea"><strong>_</strong></h1>
+                                <p class="shadow-black-txt">Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                                    Donec id elit non mi
+                                    porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p
+                                    class="btn-comenzar d-flex align-items-center rounded-circle justify-content-center yellowgreen-planet-color">
+                                    <a class="display-2 white-txt hover-white-txt" href="#habilidades"
+                                        role="button">Comenzar</a>
+                                </p>
+                    </div>
                 </div>
-
             </div>
 
         </div>
+        <div class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </div>
+        <div class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </div>
+    </div>
+-->
 
 
 
+    <div class=" " id="habilidades">
 
+        <div class="skill-card  shadow-green">
+            <div class="text-center skill-text-content">
+                <h2 class="skill-panel-txt mb-4 shadow-redchicago-txt ">Habilidades</h2>
+                <p class="shadow-white-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur hic volupt
+                    atem quis deserunt, dolores nesciunt ducimus non earum necessitatibus aut autem fugit accusantium,
+                    magni doloremque tempora natus maiores quisquam!
+                </p>
+            </div>
+            <div class="skill-panel-group h-100 d-flex text-center my-4">
+                <div class="skill-panel-1 col h-100">
+                    <h3 class="skill-panel-txt m-4 shadow-redchicago-txt">Herramientas</h3>
 
+                    <div class="hexa-wrap d-flex justify-content-center">
+                        <div class="hexa-card hex-h1">
 
-
-        <div class="second-content h-100">
-
-            <div class="row">
-                <div class="title-second-content text-center my-3  col-12">
-                    <h3>Conocimientos</h3>
-                </div>
-                <div class="text-second-content">
-                    <div class="row">
-                        <div class="left-side-second-content col-12">
-                            <div class="row">
-                                <div class="item-second-content p-3 m-3 col">
-                                    <h1>Hola mi nombre es Ivan Santis </h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam
-                                        dolorem et aspernatur libero
-                                        consequuntur.</p>
-                                </div>
-
-                                <div class="item-second-content p-3 m-3 col">
-                                    <h1>Hola mi nombre es Ivan Santis </h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam
-                                        dolorem et aspernatur libero
-                                        consequuntur.</p>
-                                </div>
-                                <div class="item-second-content p-3 m-3 col">
-                                    <h1>Hola mi nombre es Ivan Santis </h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam
-                                        dolorem et aspernatur libero
-                                        consequuntur.</p>
-                                </div>
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="right-side-second-content col-12">
-                            <div class="row">
-                                <div class="item-second-content p-3 m-3 col">
-                                    <h1>Hola mi nombre es Ivan Santis </h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam
-                                        dolorem et aspernatur libero
-                                        consequuntur.</p>
-                                </div>
+                    <div class="hexa-wrap ">
+                        <div class="hexa-card hex-h2">
 
-                                <div class="item-second-content p-3 m-3 col">
-                                    <h1>Hola mi nombre es Ivan Santis </h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam
-                                        dolorem et aspernatur libero
-                                        consequuntur.</p>
-                                </div>
-                                <div class="item-second-content p-3 m-3 col">
-                                    <h1>Hola mi nombre es Ivan Santis </h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam
-                                        dolorem et aspernatur libero
-                                        consequuntur.</p>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap d-flex justify-content-end  ">
+                        <div class="hexa-card hex-h3">
+
+                        </div>
+                    </div>
+                    <div class="hexa-wrap d-flex justify-content-center  ">
+                        <div class="hexa-card hex-h4">
+
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap ">
+                        <div class="hexa-card hex-h5">
+
+                        </div>
+                    </div>
+                    <div class="hexa-wrap d-flex justify-content-center">
+                        <div class="hexa-card hex-h6">
+
                         </div>
                     </div>
                 </div>
 
-                <div class="title-second-content text-center my-3  col-12">
-                    <h3>Habilidades</h3>
+                <div class="skill-panel-2 col h-100">
+                    <h3 class="skill-panel-txt m-4 shadow-redchicago-txt">Lenguajes</h3>
+                    <div class="hexa-wrap d-flex justify-content-center">
+                        <div class="hexa-card hex-l1">
+
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap ">
+                        <div class="hexa-card hex-l2">
+
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap d-flex justify-content-end">
+                        <div class="hexa-card hex-l3">
+
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap ">
+                        <div class="hexa-card hex-l4">
+
+                        </div>
+                    </div>
+                    <div class="hexa-wrap d-flex justify-content-center">
+                        <div class="hexa-card hex-l5">
+
+                        </div>
+                    </div>
+
                 </div>
 
-                
+                <div class="skill-panel-3 col h-100">
+                    <h3 class="skill-panel-txt m-4 shadow-redchicago-txt">Frameworks</h3>
+                    <div class="hexa-wrap d-flex justify-content-center">
+                        <div class="hexa-card hex-f1">
 
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap d-flex justify-content-end">
+                        <div class="hexa-card hex-f2">
+
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap ">
+                        <div class="hexa-card hex-f3">
+
+                        </div>
+                    </div>
+
+                    <div class="hexa-wrap d-flex justify-content-end  ">
+                        <div class="hexa-card hex-f4">
+
+                        </div>
+                    </div>
+                    <div class="hexa-wrap ">
+                        <div class="hexa-card hex-f5">
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 
 
 
+    <!--
+
+    <div class="container-fluid ">
+        <div class="row h-100">
+            <div class="content-welcome d-flex justify-content-center  position-relative ">
+                <div class="" id="about-container">
+                    <h2 class="title-about">Hola, mi nombre es Ivan Santis,</h2>
+                    <p class="p-about"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cum veniam
+                        consectetur distinctio. Dolorum tempore consectetur officia at pariatur?</p>
+                </div>
+
+                <div class="" id="perfil-container">
+                    <div class="spn-img-perfil rounded-circle">
+                    </div>
+                    <p class="p-about">DonSantis</p>
+                </div>
+
+
+                <div class="" id="skill-container"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+-->
+
+
+    <div class="app-section-1 my-5 text-center d-flex  justify-content-center position-relative">
+
+        <div class="buton-app-1 position-absolute martini">
+            <h3>Comenzar</h3>
+
+        </div>
+
+    </div>
+
+    <!--
+    <div class="app-section-2 my-5 text-center d-flex  justify-content-center position-relative">
+
+        <div class="text-app">
+            <h3 class="title-app shadow-letter-big">Pokedex</h3>
+            <p class=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cum veniam
+                consectetur distinctio. Dolorum tempore consectetur officia at pariatur?</p>
+        </div>
+        <div class="buton-app-2 position-absolute  ">
+            <h3>Comenzar</h3>
+        </div>
+
+    </div>
+
+-->
 
 
 
 
+    <div class="banner-end  ">
+    </div>
 
 
 
+    <span class="divider-danger "></span>
 
-
-
-
-
-
-
-
-
-
-    <footer class="footer page-footer footer-content font-small stylish-color-dark pt-4" style="padding-left: 0px;">
+    <footer class="footer page-footer footer-content  white-txt  shadow-box-mate pt-4" style="padding-left: 0px;">
 
         <!-- Footer Links -->
-        <div class="container text-center text-md-left ">
+        <div class="container text-md-left ">
 
             <!-- Grid row -->
             <div class="row">
@@ -189,7 +350,9 @@
                 <div class="col-md-4 mx-auto">
 
                     <!-- Content -->
-                    <h5 class="title-footer font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+                    <h5 class="title-footer font-weight-bold text-uppercase mt-3 mb-4 shadow-blue-txt display-1">Footer
+                        Content
+                    </h5>
                     <p class=" p-footer">Here you can use rows and columns to organize your footer content. Lorem ipsum
                         dolor sit amet,
                         consectetur
@@ -199,21 +362,21 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-md-2 mx-auto">
+                <div class="col-md-2 mx-auto ">
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links1</h5>
-                    <ul class="list-unstyled">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 shadow-blue-txt display-6">Apps</h5>
+                    <ul class="list-unstyled ">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="#!">Rick & Morty Album</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="#!">Pokemon Pokedex</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
+                            <a href="#!">Rick & Morty Album</a>
                         </li>
                         <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#!">Rick & Morty Album</a>
                         </li>
                     </ul>
 
@@ -223,19 +386,19 @@
                 <!-- Grid column -->
                 <div class="col-md-2 mx-auto">
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links2</h5>
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 shadow-blue-txt display-6">Contacto</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="#!">Facebook</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="#!">Instagram</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
+                            <a href="#!">Linkedin</a>
                         </li>
                         <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#!">Email</a>
                         </li>
                     </ul>
 
@@ -245,19 +408,19 @@
                 <!-- Grid column -->
                 <div class="col-md-2 mx-auto">
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links3</h5>
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 shadow-blue-txt display-6">Ir</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="#!">Inicio</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="#!">Habilidades</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
+                            <a href="#!">Perfil</a>
                         </li>
                         <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#!">Apps</a>
                         </li>
                     </ul>
                 </div>
@@ -270,10 +433,10 @@
         <!-- Call to action -->
         <ul class="list-unstyled list-inline text-center py-2">
             <li class="list-inline-item">
-                <h5 class="mb-1">Quieres ver mas apps?</h5>
+                <h5 class="mb-1">Quieres volver al inicio?</h5>
             </li>
             <li class="list-inline-item">
-                <a href="#!" class="btn btn-danger btn-rounded waves-effect waves-light">Vamos!</a>
+                <a href="#home" class="btn btn-danger btn-rounded waves-effect waves-light">Vamos!</a>
             </li>
         </ul>
         <!-- Call to action -->
