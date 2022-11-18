@@ -235,87 +235,15 @@
     
   }
 
-  @media (max-width: 800px) {
-    .skill-panel-txt{
-        text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
-        font-size: 30px;
-    }
-
-    
-
-    .hexa-wrap-f1{
-        display: flex;
-        justify-content: center;
-    }
-    .hexa-wrap-f2{
-        display: flex;
-        justify-content: end;
-    }
-    .hexa-wrap-f3{
-        
-    }
-    .hexa-wrap-f4{
-        display: flex;
-        justify-content: center;
-    }
-    .hexa-wrap-f5{
-        
-    }
-
-    .hexa-wrap-l1{
-        display: flex;
-        justify-content: center;
-    
-    }
-    .hexa-wrap-l2{
-        
-    }
-    .hexa-wrap-l3{
-        display: flex;
-        justify-content: end;
-    }
-    .hexa-wrap-l4{
-        display: flex;
-        justify-content: center;
-    }
-    .hexa-wrap-l5{
-        
-    }
-
-
-
-    .hexa-wrap-h1{
-        display: flex;
-        justify-content: center;
-    
-    }
-    .hexa-wrap-h2{
-        
-    }
-    .hexa-wrap-h3{
-        display: flex;
-        justify-content: end;
-    }
-    .hexa-wrap-h4{
-        display: flex;
-        justify-content: center;
-    }
-    .hexa-wrap-h5{
-        
-    }
-    .hexa-wrap-h6{
-        display: flex;
-        justify-content: center;
-    }
-
-
-
-
-
-  }
+  
 
   @media (max-width: 800px) {
-
+    .hexa-card:hover{
+        width: 100px;
+        height: 70px;
+        
+        
+    }  
     .hexa-wrap-f1{
         display: flex;
         justify-content: center;
