@@ -1,6 +1,6 @@
-.app-section-1{
+.app-section-1 {
     height: 600px;
-    background-repeat:no-repeat;   
+    background-repeat: no-repeat;
     background-position: center center;
     background-image: url("../img/rick&back.jpeg");
     box-shadow: 0px 0px 30px var(--color-twelve);
@@ -18,18 +18,18 @@
     -moz-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
-    z-index:998;
+    z-index: 998;
 }
 
 .buton-app-1:hover {
     box-shadow: 0px 0px 60px var(--color-nine);
-    
-}   
+
+}
 
 
-.app-section-2{
+.app-section-2 {
     height: 600px;
-    background-repeat:no-repeat;   
+    background-repeat: no-repeat;
     background-position: center center;
     background-image: url("../img/pokebackground.jpg");
     box-shadow: 0px 0px 30px var(--color-five);
@@ -38,7 +38,6 @@
 .buton-start-app-pkm {
     top: 70%;
     border-radius: 10px;
-    font-size: 75px;
     color: #FFFF;
     border: 3px solid #FFFF;
     box-shadow: 0px 0px 30px var(--color-twelve);
@@ -46,47 +45,39 @@
     -moz-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
-    z-index:998;
+    z-index: 998;
     background-color: var(--color-twelve);
 }
 
+
+
 .buton-start-app-pkm:hover {
     box-shadow: 0px 0px 60px var(--color-twelve);
-    
+
 }
 
-.carousel-caption-pkm{
+.carousel-caption-pkm {
     top: 10%;
     left: 5%;
     width: 50%;
 }
 
-.buton-start-app-pkm {
-    top: 70%;
-    width: 55%;
-    border-radius: 10px;
-    font-size: 10px;
-    color: #FFFF;
-    border: 4px solid #FFFF;
-    -webkit-transition: all 0.5s 0s ease;
-    -moz-transition: all 0.5s 0s ease;
-    -o-transition: all 0.5s 0s ease;
-    transition: all 0.5s 0s ease;
-    z-index:998;
+.carousel-caption-rym {
+    bottom: 5%;
 }
 
+
 .buton-start-app-rym {
-    top: 70%;
-    width: 55%;
     border-radius: 10px;
-    font-size: 10px;
     color: #FFFF;
     border: 4px solid #FFFF;
     -webkit-transition: all 0.5s 0s ease;
     -moz-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
-    z-index:998;
+    z-index: 998;
+
+ 
 }
 
 .buton-start-app-rym:hover {
@@ -94,7 +85,183 @@
     box-shadow: 1px 1px 25px #00ff15, 0 0 10px #00ff15, 0 0 20px #ffff;
 }
 
-.title-app{
+.title-app {
     font-size: 300px;
     color: #FFFF;
 }
+
+.title-carousel-pkmn {
+    font-size: 180px;
+}
+
+.pkm-btn {
+    margin-top: 6%;
+}
+
+.rym-btn{
+    margin-top: 6%;
+}
+
+.buton-start-app-pkm {
+    font-size: 240px;
+}
+
+/* RESPONsivE */
+@media (min-width: 1280px) {
+    .title-carousel-pkmn {
+        font-size: 160px;
+    }
+
+    .buton-start-app-pkm {
+        font-size: 40px;
+    }
+
+    .title-carousel-rym {
+        font-size: 160px;
+    }
+
+    .buton-start-app-rym {
+        font-size: 40px;
+    }
+
+    .p-carousel-rym{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1280px) {
+    .title-carousel-pkmn {
+        font-size: 160px;
+    }
+
+    .buton-start-app-pkm {
+        font-size: 40px;
+    }
+
+    .title-carousel-rym {
+        font-size: 160px;
+    }
+
+    .buton-start-app-rym {
+        font-size: 40px;
+    }
+
+    .p-carousel-rym{
+        font-size: 15px;
+    }
+    .buton-start-app-rym{
+        font-size: 25px;
+    }
+    .buton-start-app-pkm{
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+    .title-carousel-pkmn {
+        font-size: 120px;
+    }
+
+    .buton-start-app-pkm {
+        font-size: 30px;
+    }
+
+    .title-carousel-rym {
+        font-size: 120px;
+    }
+
+    .buton-start-app-rym {
+        font-size: 30px;
+    }
+
+    .p-carousel-rym{
+        font-size: 10px;
+    }
+    .buton-start-app-rym{
+        font-size: 20px;
+    }
+    .buton-start-app-pkm{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .title-carousel-pkmn {
+        font-size: 80px;
+    }
+
+    .p-carousel-pkmn {
+        font-size: 15px;
+    }
+
+
+    .title-carousel-rym {
+        font-size: 80px;
+    }
+
+    .p-carousel-rym{
+        font-size: 6px;
+    }
+    .buton-start-app-rym{
+        font-size: 15px;
+    }
+    .buton-start-app-pkm{
+        font-size: 15px;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .title-carousel-pkmn {
+        font-size: 60px;
+    }
+
+    .p-carousel-pkmn {
+        font-size: 10px;
+    }
+
+    .title-carousel-rym {
+        font-size: 60px;
+    }
+
+    .p-carousel-rym{
+        font-size: 3px;
+    }
+    .buton-start-app-rym{
+        font-size: 10px;
+    }
+    .buton-start-app-pkm{
+        font-size: 10px;
+    }
+}
+
+    @media (max-width: 480px) {
+        .title-carousel-pkmn {
+            font-size: 50px;
+        }
+
+        .p-carousel-pkmn {
+            font-size: 6px;
+
+        }
+
+        .title-carousel-rym {
+            font-size: 50px;
+        }
+
+        .p-carousel-rym {
+            font-size: 6px;
+
+        }
+        .buton-start-app-rym{
+            font-size: 5px;
+        }
+
+        .buton-start-app-pkm{
+            font-size: 5px;
+        }
+    }
