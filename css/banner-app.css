@@ -52,14 +52,14 @@
 
   @media (max-width: 1024px) {
    .banner-app{
- 
+    height: 250px;
     letter-spacing: 3rem;
 }
   }
 
   @media (max-width: 800px) {
  .banner-app{
-
+  height: 200px;
     letter-spacing: 2rem;
 }
   }
@@ -68,5 +68,9 @@
  .banner-app{
  
     letter-spacing: 1rem;
+}
+
+.banner-app{
+  height: 150px;
 }
   }

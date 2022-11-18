@@ -126,6 +126,9 @@ background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, F
 .shadow-green{
     box-shadow: 1px 1px 5px #000, 0 0 10px #00ff15, 0 0 20px #ffff;
 }
+.shadow-green-white{
+    box-shadow: 1px 1px 5px #ffff, 0 0 10px #00ff15, 0 0 20px #ffff;
+}
 
 .shadow-yellow{
     box-shadow: 1px 1px 5px #000, 0 0 10px #fbff04, 0 0 20px #ffff;
