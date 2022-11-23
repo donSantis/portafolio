@@ -1,0 +1,107 @@
+ .card-capa-2 {
+     height: 400px;
+     width: 200px;
+     border-radius: 50% / 5%;
+     position: absolute;
+     background-color: blue;
+     z-index: 2;
+     margin: -12px 0px 0px 0px;
+ }
+
+ .card-capa-3 {
+     height: 394px;
+     width: 200px;
+     border-radius: 50% / 5%;
+     position: absolute;
+     margin: 10px;
+     background-color: red;
+     z-index: 3;
+     margin: -5px 0px 0px 11px;
+     -webkit-tap-highlight-color: transparent;
+
+ }
+
+ .card-modal-margin {
+     margin: 20px 30px 5px 5px;
+ }
+
+ .card-char-modal {
+     height: 240px;
+     width: 170px;
+ }
+
+ .card-char-modal-2 {
+    background-color: blue;
+    height: 240px;
+    width: 170px;
+}
+
+
+
+
+ .modal-card-title-char {
+     background-color: black;
+     position: absolute;
+     height: 30px;
+     width: 150px;
+     top: -12px;
+     left: 6%;
+     color: var(--letter-white);
+ }
+
+ .modal-card-status-char {
+     background-color: #67f15a;
+     position: absolute;
+     height: 30px;
+     width: 40px;
+     top: 3px;
+     left: -9%;
+     color: var(--letter-white);
+ }
+
+ .modal-card-image {
+     width: auto;
+     height: 200px;
+     margin: 0px 10px -4px 10px;
+     shape-outside: circle(50%);
+ }
+
+
+ .modal-card-body-char {
+
+     width: auto;
+     height: 150px;
+     background-color: var(--color-one);
+     margin: 10px 10px 10px 10px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     font-size: 10px;
+
+ }
+
+ .qty-modal-char {
+     background-color: var(--color-twelve);
+     position: absolute;
+     height: 40px;
+     width: 40px;
+     right: -7px;
+     bottom: -6px;
+     color: var(--letter-white);
+     
+     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: 60px -16px teal;
+
+ }
+
+ .modal-text-qty{
+    font-size: 15px;
+    margin-top: 7px;
+ }
+
+
+ .modal-body-deck{
+    background-image: url("../img/wood.jpg");
+ }
+

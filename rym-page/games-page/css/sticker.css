@@ -1,0 +1,68 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+#piezas {
+	display: flex;
+	flex-wrap: wrap;
+	width: 400px;
+	margin: auto;
+	justify-content: center;
+}
+
+#puzzle {
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.pieza {
+	width: 106px;
+	height: 165px;
+	background-size: cover;
+	margin: 10px;
+}
+
+.placeholder {
+	background-color: #F2F2F2;
+	outline: 1px solid #333;
+	width: 106px;
+	height: 165px;
+	transition: 1s;
+}
+
+.placeholder.hover {
+	background-color: orange;
+}
+
+.placeholder .pieza {
+	margin: 0;
+}
+
+#mensaje {
+	color: black;
+	text-align: center;
+	display: none;
+}
+
+.ganaste {
+	background-color: #B3D67C;
+}
+
+.ganaste #mensaje {
+	display: block;
+}
+
+.ganaste .placeholder {
+	outline: none;
+}
+
+.ganaste #piezas {
+	display: none;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}

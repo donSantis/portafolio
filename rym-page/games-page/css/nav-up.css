@@ -1,0 +1,90 @@
+.nav-up{
+    background: var(--gradiant-one); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 0px 0px 3px 3px;   
+    box-shadow: 0px 0px 20px 10px var(--color-nine);  
+}
+
+.logo-img {
+        
+    border: 2px solid var(--color-white);
+    background-image: url("../img/morty2.png");
+    background-repeat: no-repeat;
+    background-color: var(--color-eigth);
+    transition: 2s;
+}
+
+.nav-up .perfil-icon{
+    height: 40px;
+}
+.dropdown-menu{
+    margin-top: 80px;
+    background: none;
+    
+}
+.perfil-dropdown-menu{
+    position: absolute;
+    left: 20px;
+    width: 240px;
+    height: 205px;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 20px 10px var(--color-nine); 
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    font-weight: bold; 
+}
+.perfil-dropdown-menu2{
+    left: -70px;
+}
+
+.dropdown-item{
+    border: 1px solid var(--color-c2);
+}
+
+.perfil-dropdown-menu::before {
+    content: '';
+    display: block;
+    width: 380px;
+    height: 280px;
+    background: url(../img/metal-arm.png) center no-repeat;
+    position: absolute;
+    top: -70px;
+    left:  -5px;
+  }
+
+.nav-up .setting-icon{
+    height: 40px;
+    width: 50px;
+    
+}
+.setting-dropdown-menu{
+
+}
+
+.logo-img:hover {
+    background-image: url("C:/Users/santi/OneDrive/Escritorio/portafolio git/CONTAINERS/img/morty.png");
+    box-shadow: 5px 10px 18px var(--color-ten);
+}
+
+.nav-up{
+    border-bottom: 2px solid var(--letter-white);
+}
+
+.nav-down{
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    font-weight: bold; 
+}
+
+ 
+
+.navbar {
+    position: absolute;
+    right:0;
+    border: 3px solid var(--letter-white);
+    height: 50px;
+    text-decoration: none;
+    box-shadow: 5px 10px 40px var(--color-ten);
+}
+ 
+
+ 

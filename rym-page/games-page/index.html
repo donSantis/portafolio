@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containers</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap4-toggle/3.6.1/bootstrap4-toggle.min.css"
+        integrity="sha512-EzrsULyNzUc4xnMaqTrB4EpGvudqpetxG/WNjCpG6ZyyAGxeB6OBF9o246+mwx3l/9Cn838iLIcrxpPHTiygAA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal-mazo.css">
+    <link rel="stylesheet" href="css/color-var.css">
+    <link rel="stylesheet" href="css/button-deck.css">
+    <link rel="stylesheet" href="css/char-card.css">
+</head>
+
+<body>
+    <!-- Inicio Menu-->
+    <header class="header">
+        <nav class="navbar navbar-expand-md nav-up">
+            <!-- colapsara en md-->
+            <div class="container-fluid d-flex">
+                <!--costado a costado-->
+                <a class="navbar-brand" href="#">
+                    <img class="rounded-circle align-items-center" src="img/morty3.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-radioactive"></i>
+                </button> <!--  Boton del menu-->
+                <!-- Menu collapse-->
+                <div class="input-group">
+
+                </div>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto m-2 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"> perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> log</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header class="sticky-top">
+
+        <nav class="navbar navbar-expand-md nav-down ">
+            <!-- colapsara en md-->
+            <div class="container-fluid d-flex ">
+                <!--costado a costado-->
+                <!-- Menu collapse-->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mx-auto m-2 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index2.html"> Personajes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Capitulos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> menu4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> menu6</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="container">
+
+
+
+        <section class="content-1 alto-500">
+            <div id="app" class="container containers-char my-5">
+                <h2 class="titulo-container text-center my-4"> Personajes</h2>
+                <input v-model="search" type="search" class="form-control rounded search my-5"
+                    placeholder="Rick Sanch...." aria-label="Search" aria-describedby="search-addon" />
+                <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
+                    <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
+                    <div v-for="i in filterSearch" :key="i.id">
+                        <div class="">
+
+                            <div class=" card card-char absolute m-4">
+                                <span id="id">{{i.id}}</span>
+                                <div class="card-status-char text-center rounded-circle">
+                                    {{i.status}}</div>
+                                <div id="name" class="card-title-char text-center">{{i.name}}</div>
+                                <div class="card-status-char text-center rounded-circle">
+                                    {{i.status}}</div>
+                                <div class="card-species-char text-center rounded-circle">{{i.origin.name}}</div>
+
+                                <div class="card-image">
+                                    <img class="card-img-top" :src="i.image">
+                                </div>
+                                <div class="card-body-char ">
+                                    <p class="card-title"><strong>{{i.name}}</strong></p>
+                                    <p class="card-text"> Status:
+                                        {{i.status}}
+                                    </p>
+                                </div>
+                                <a v-on:click="add3(i.id,1)" class="add-deck-btn position-absolute rounded-circle "><i
+                                        class="bi bi-plus-circle-fill"></i></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li v-on:click="atras()" class="page-item"><a class="page-link" href="#">Back</a></li>
+                        <li v-on:click="siguiente()" class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <p>{{pages}}</p>
+                    </ul>
+                </nav>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl " role="document">
+                        <div class="modal-content modal-body-deck">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <div class="modal-body">
+                                <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
+                                    <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
+                                    <div
+                                        class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
+                                        <div v-for="i in items">
+
+                                            <div v-if=" i.stock == 1">
+                                                <div class=" card-modal-margin">
+
+                                                    <div class=" card card-char absolute card-char-modal">
+                                                        <span id="id">{{i.stock}}</span>
+
+                                                        <div id="name" class="modal-card-title-char text-center">
+                                                            {{i.name}}</div>
+                                                        <div class="modal-card-status-char text-center rounded-circle">
+                                                            {{i.status}}</div>
+
+
+                                                        <div class="modal-card-image">
+                                                            <img class="card-img-top" :src="i.image">
+                                                        </div>
+                                                        <div class="modal-card-body-char">
+                                                            <p class="card-title"><strong>{{i.name}}</strong></p>
+                                                            <p class="card-text"> Status:
+                                                                {{i.status}}
+                                                            </p>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div v-else-if=" i.stock ==2">
+                                                <div class=" card-modal-margin">
+                                                    <span class="card-capa-3 card-char-modal"></span>
+                                                    <div class=" card card-char absolute card-char-modal">
+                                                        <span id="id">{{i.stock}}</span>
+
+                                                        <div id="name" class="modal-card-title-char text-center">
+                                                            {{i.name}}</div>
+                                                        <div class="modal-card-status-char text-center rounded-circle">
+                                                            {{i.status}}</div>
+
+                                                        <div class="modal-card-image">
+                                                            <img class="card-img-top" :src="i.image">
+                                                        </div>
+                                                        <div class="modal-card-body-char">
+                                                            <p class="card-title"><strong>{{i.name}}</strong></p>
+                                                            <p class="card-text"> Status:
+                                                                {{i.status}}
+                                                            </p>
+                                                            <div
+                                                                class="qty-modal-char text-center align-items-center rounded-circle">
+                                                                <p class="bold-text text-center modal-text-qty">
+                                                                    X{{i.stock}}</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div v-else>
+                                                <div class=" card-modal-margin">
+                                                    <span class="card-capa-2 card-char-modal"></span>
+                                                    <span class="card-capa-3 card-char-modal"></span>
+                                                    <div class=" card card-char absolute card-char-modal">
+                                                        <span id="id">{{i.stock}}</span>
+
+                                                        <div id="name" class="modal-card-title-char text-center">
+                                                            {{i.name}}</div>
+                                                        <div class="modal-card-status-char text-center rounded-circle">
+                                                            {{i.status}}</div>
+
+                                                        <div class="modal-card-image">
+                                                            <img class="card-img-top" :src="i.image">
+                                                        </div>
+                                                        <div class="modal-card-body-char">
+                                                            <p class="card-title"><strong>{{i.name}}</strong></p>
+                                                            <p class="card-text"> Status:
+                                                                {{i.status}}
+                                                            </p>
+                                                            <div
+                                                                class="qty-modal-char text-center align-items-center rounded-circle">
+                                                                <p class="bold-text text-center modal-text-qty">
+                                                                    X{{i.stock}}</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <button v-on:click="clear()" id="next-button">Clear all</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary  button-deck " data-toggle="modal"
+                    data-target="#exampleModal"> <span> {{totalCardDeckvar}}</span></button>
+            </div>
+        </section>
+        <section class="content-4 alto-500">
+            <div class="container " id="app3">
+                <div class="menu">
+                    <div id="store-container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/vanillajs2.js"></script>
+    <script src="js/vanillajs3.js"></script>
+
+</body>
+
+</html>

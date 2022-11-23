@@ -1,0 +1,13 @@
+.page-sticker-card{
+    position: relative;
+    display: flex;
+    grid-row: grid;
+    height: 600px;
+    background-color: red;
+}
+
+.page-sticker-card-2{
+    position: relative;
+    height: 600px;
+    background-color: blue;
+}

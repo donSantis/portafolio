@@ -1,0 +1,125 @@
+.flyer-principal-3{
+  overflow: hidden;
+  margin: 50px 0px 50px 0px;
+  box-shadow: 0px 0px 20px 10px var(--color-c1);
+  font-family: 'Inconsolata', monospace;
+  border-radius: 30px;
+  color: var(--color-c1);
+  font-size: 15px;
+  background-image: url(../img/war.jpg);
+    /* border-radius: 15px; */
+    background-repeat:no-repeat;
+    background-position: center center;
+    overflow: hidden;
+  }
+  
+  .flyer-title{
+    color: white;
+  }
+  
+  .flyer-title h5{
+    color: #f4a563;
+  }
+  
+  
+  .flyer-box{
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    color: white;
+    font-size: 55px;
+  }
+  .flyer-box h5{
+    font-size: 15px;
+  }
+  .flyer-box h6{
+    font-size: 11px;
+  }
+  
+  .contact-box-nro{
+    width: 200px;
+    border: 5px solid white;
+    color: white;
+  }
+  
+  
+  /*  TOP-FLYER            */
+  
+  /*  TOP-FLYER SECTION         */
+  .flyer-top{
+    height: 350px;
+    background-image: url("../img/b1.jpg");
+    background-repeat:no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 15px 15px 0px 0px;
+    
+  }
+  
+  /*  TOP-FLYER SECTION    CONTENT     */
+  
+  .flyer-top-circle{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .flyer-top-circle-img{
+    background-image: url("../img/b2.jpg");
+    width: 270px;
+    height: 270px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  
+  /*  MID-FLYER            */
+  /*  MID-FLYER SECTION         */
+  .flyer-mid{
+    height: 220px;
+    border-radius: 0px 0px 15px 15px ;
+    background-repeat:no-repeat;
+    background-position: center center;
+    overflow: hidden;
+  
+  }
+  /*  MID-FLYER SECTION   CONTENT      */
+  
+ 
+  #service-1 {
+    list-style-image: url("../img/banner3.jpg");
+  }
+  
+  #service-2 {
+    list-style-image: url("../img/banner4.jpg");
+  }
+  
+  #service-3 {
+    list-style-image: url("../img/banner5.jpg");
+  }
+  #services {
+    position: relative;
+    margin: 10px 10px 10px 30px;
+    
+  }
+  
+  #text-flyer-1{
+    position: absolute;
+    top: 4%;
+    font-size: 10px;
+    
+  }
+  
+  #text-flyer-2{
+    font-size: 10px;
+    position: absolute;
+    top: 38%;
+  }
+  
+  #text-flyer-3{
+    font-size: 10px;
+    position: absolute;
+    top: 70%;
+  }
+   
