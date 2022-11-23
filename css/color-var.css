@@ -4,7 +4,7 @@
     --color-chicago-red:#FF0000;
     --color-black-mate:#0f0500;
     --color-yellow: rgb(251, 223, 7);
-
+    --color-brown: rgb(86, 43, 8);
 
 
 
@@ -28,7 +28,7 @@
 
 
 
-    --color-c1: rgb(86, 43, 8);
+    
     --color-c2: rgba(61, 199, 11, 0.705);
     --color-mate-black: #1b1b1b;
     --color-green: rgb(62, 199, 11);
@@ -80,6 +80,13 @@ background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, F
     color: #FFFF;
 }
 
+.brown-txt{
+    color: rgb(86, 43, 8);
+}
+
+.orange-txt{
+    color: #f4a563;
+}
 
 
 /*  HOVER  COLOR TEXT CLASS    */ 
@@ -93,7 +100,9 @@ background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, F
 }
 
 /*  shadow COLOR TEXT CLASS    */ 
-
+.shadow-greenwhite-txt{
+    text-shadow: 1px 1px 5px rgb(96, 212, 0), 0 0 10px #00ff15, 0 0 20px #ffff;
+}
 .shadow-green-txt{
     text-shadow: 1px 1px 5px #000, 0 0 10px #00ff15, 0 0 20px #ffff;
 }
@@ -117,9 +126,11 @@ background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, F
 
 }
 .shadow-yellow-txt{
-    box-shadow: 1px 1px 5px #000, 0 0 10px #fbff04, 0 0 20px #ffff;
+    box-shadow: 1px 1px 5px #000, 0 0 10px #00ff15, 0 0 20px #ffff;
 }
-
+.shadow-brown{
+    box-shadow: 0px 0px 20px 10px var(--color-brown);
+}
 /* SHADWS */
  
 

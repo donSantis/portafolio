@@ -1,0 +1,191 @@
+.flyer-principal-3{
+  overflow: hidden;
+  border-radius: 30px;
+  color: var(--color-c1);
+    /* border-radius: 15px; */ 
+  }
+  .flyer-title-content{
+    font-size: 25px;
+  }
+ .flyer-content-content{
+  font-size: 11px;
+ }
+  
+  .flyer-box{
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    color: white;
+  }
+
+  .icon-rym{
+    font-size: 55px;
+  }
+  .flyer2-title{
+    font-size: 35px;
+  }
+  .flyer2-subtitle{
+    font-size: 30px;
+  }
+  
+  .contact-box-nro{
+    width: 200px;
+    border: 5px solid white;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  .text-content-ryms{ 
+    top: 20%;
+    left: 25%;
+  }
+  
+/* RESPONsivE */
+ 
+@media (max-width: 1200px) {
+  .flyer-box{
+    width: 130px;
+    height: 130px;
+  }
+  .flyer2-title{
+    font-size: 30px;
+  }
+  .flyer2-subtitle{
+    font-size: 25px;
+  }
+ 
+  .icon-rym{
+    font-size: 30px;
+  }
+  .flyer-title-content{
+    font-size: 15px;
+  }
+ .flyer-content-content{
+  font-size: 8px;
+ }
+
+ .contact-box-nro{
+  width: 130px;
+  margin-top: ;
+}
+}
+
+@media (max-width: 1000px) {
+  .flyer-box{
+    width: 90px;
+    height: 90px;
+  }
+
+  .flyer2-title{
+    font-size: 25px;
+  }
+  .flyer2-subtitle{
+    font-size: 20px;
+  }
+ 
+  .icon-rym{
+    font-size: 20px;
+  }
+  .flyer-title-content{
+    font-size: 9px;
+  }
+ .flyer-content-content{
+  font-size: 5px;
+ }
+}
+
+
+@media (max-width: 780px) {
+ 
+  .flyer2-title{
+    font-size: 20px;
+  }
+  .flyer2-subtitle{
+    font-size: 15px;
+  }
+ 
+
+  .icon-rym{
+    font-size: 20px;
+  }
+  .flyer-title-content{
+    font-size: 9px;
+  }
+ .flyer-content-content{
+  font-size: 5px;
+ }
+ .text-content-ryms{
+  top: 10%;
+  left: 20%;
+  font-size: 10px;
+
+}
+
+.contact-box-nro{
+  margin-top: 15px;
+}
+}
+
+@media (max-width: 600px) {
+  .flyer-box{ 
+  }
+
+  .flyer2-title{
+    font-size: 15px;
+  }
+  .flyer2-subtitle{
+    font-size: 10px;
+  }
+ 
+
+  .icon-rym{
+    font-size: 15px;
+  }
+ 
+ .flyer-content-content{
+  font-size: 5px;
+ }
+ .text-content-ryms{
+  top: 10%;
+  left: 18%;
+  font-size: 10px;
+
+}
+
+ 
+}
+
+  @media (max-width: 480px) {
+    .flyer-box{ 
+    }
+  
+    .flyer2-title{
+      font-size: 10px;
+    }
+    .flyer2-subtitle{
+      font-size: 5px;
+    }
+   
+  
+    .icon-rym{
+      font-size: 20px;
+    }
+    .flyer-title-content{
+      font-size: 9px;
+    }
+   .flyer-content-content{
+    font-size: 5px;
+   }
+   .text-content-ryms{
+    top: 10%;
+    left: 12%;
+    font-size: 10px;
+  
+  }
+  
+  .contact-box-nro{
+    margin-top: 10px;
+  }
+  }
+
+   

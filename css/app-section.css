@@ -98,7 +98,7 @@
     margin-top: 6%;
 }
 
-.rym-btn{
+.margin-btn{
     margin-top: 6%;
 }
 
@@ -229,13 +229,13 @@
     }
 
     .p-carousel-rym{
-        font-size: 3px;
+        font-size: 10px;
     }
     .buton-start-app-rym{
-        font-size: 10px;
+        font-size: 15px;
     }
     .buton-start-app-pkm{
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
@@ -258,10 +258,19 @@
 
         }
         .buton-start-app-rym{
-            font-size: 5px;
+            border: 1px solid #FFFF;
+            font-size: 10px;
         }
 
         .buton-start-app-pkm{
-            font-size: 5px;
+            border: 1px solid #FFFF;
+            font-size: 10px;
+        }
+
+        .carousel-caption-rym{
+            bottom: -7%;
+        }
+        .carousel-caption-pkm{
+            bottom: -7%;
         }
     }

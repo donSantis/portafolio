@@ -1,0 +1,92 @@
+.flyer-content-text {
+  top: 10%;
+  left: 4%;
+}
+.rym-title {
+  color: #FFFF;
+  top: 10%;
+  left: 17%;
+  font-size: 45px;
+}
+.rym-btn {
+  left: 30%;
+  border-radius: 10px;
+  font-size: 30px;
+  color: #FFFF;
+  border: 2px solid #FFFF;
+  transition: all 0.5s 0s ease;
+}
+.rym-btn:hover {
+  box-shadow: 1px 1px 25px #00ff15, 0 0 10px #00ff15, 0 0 20px #ffff;
+}
+.rym-btn a {
+  text-decoration: none;
+}
+.rym-content {
+  color: #FFFF;
+  top: 30%;
+  left: 5%;
+  font-size: 20px;
+}
+/* RESPONsivE */
+@media (min-width: 1280px) {}
+
+@media (max-width: 1280px) {
+
+  .rym-title {
+    font-size: 30px;
+  }
+
+  .rym-btn {
+    border-radius: 10px;
+    font-size: 15px;
+
+  }
+
+  .rym-content {
+    color: #FFFF;
+    font-size: 15px;
+  }
+
+}
+@media (max-width: 1024px) {
+  .rym-content {
+
+    font-size: 11px;
+  }
+}
+@media (max-width: 800px) {
+  .rym-title {
+    font-size: 30px;
+  }
+  .rym-btn {
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .rym-content {
+    top: 37%;
+    font-size: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .rym-title {
+    font-size: 25px;
+  }
+  .rym-btn {
+    font-size: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .rym-title {
+    font-size: 20px;
+  }
+
+  .rym-content {
+    font-size: 6px;
+  }
+
+  .rym-btn {
+    font-size: 6px;
+
+  }
+}
