@@ -1,7 +1,3 @@
-body {
-	font-family: Arial, Verdana, sans-serif;
-}
-
 #piezas {
 	display: flex;
 	flex-wrap: wrap;

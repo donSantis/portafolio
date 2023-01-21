@@ -1,0 +1,138 @@
+.card-char3{
+    height: 235px;
+    width: 300px;
+    border-radius: 50% / 5%;
+    position: relative;
+    margin: 10px;
+    background-image: url("../img/card365.png");
+    background-color: var(--color-five);
+    filter: brightness(90%)!important;
+    transition: 0.5s ease;
+    z-index: 5;
+    box-shadow: 5px 10px 40px var(--color-ten);
+}
+.card-char3 .card-img-top{
+    height: 100px;
+    width: 100px;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+.card-char3 .card-image{
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    margin: 40px 10px 10px 10px;
+    
+    shape-outside: circle(50%);
+    -webkit-transition: all 0.5s 0s ease;
+-moz-transition: all 0.5s 0s ease;
+-o-transition: all 1s 0s ease;
+transition: all 0.5s 0s ease;
+}
+
+
+
+.card-char4{
+    height: 465px;
+    width: 300px;
+    border-radius: 50% / 5%;
+    position: relative;
+    margin: 10px;
+    background-image: url("../img/card365.png");
+    background-color: var(--color-five);
+    filter: brightness(90%)!important;
+    transition: 0.5s ease;
+    z-index: 5;
+    box-shadow: 5px 10px 40px var(--color-ten);
+}
+.card-char4:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    box-shadow: 5px 10px 40px var(--color-ten);
+    z-index: 14;
+
+}
+ 
+
+.card-char4 .card-image{
+    position: absolute;
+    left: 39px;
+    top: 19px;
+    box-shadow: 5px 10px 40px var(--color-white);
+    margin: 40px 10px 10px 10px;
+    shape-outside: circle(50%);
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+
+.card-img-top{
+    height: 200px;
+    width: 200px;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+.card-title-char{
+    position: absolute;
+    height: 30px;
+    width: 225px;
+    top: -6px;
+    left: 13%;
+    color: var(--letter-white);
+}
+
+.card-char4 .card-status-char{
+    background-color: #67f15a;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 11px;
+    left: 3%;
+    color: var(--letter-white);
+    content: "vivo";
+    box-shadow: 5px 10px 40px var(--color-green);
+}
+.card-status-char2{
+    background-color: #ff0000;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 11px;
+    left: 3%;
+    color: var(--letter-white);
+    content: "muertos";
+}
+
+
+
+.card-char4 .card-species-char{
+    background-color: #98741c;
+    position: absolute;
+    height: 60px;
+    width: 250px;
+    bottom: 10px;
+    left: 8%;
+    color: var(--letter-white);
+    box-shadow: 0px 0px 20px var(--color-yellow);
+}
+
+.card-species-char{
+    background-color: #98741c;
+    position: absolute;
+    height: 60px;
+    width: 250px;
+    bottom: 10px;
+    left: 8%;
+    color: var(--letter-white);
+}
+

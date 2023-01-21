@@ -1,0 +1,178 @@
+ /*  VARIABLES */ 
+
+:root{
+    --color-white: rgba(255, 255, 255, 0.986);
+    --color-green-transparent: rgba(62, 199, 11, 0.986);
+    --color-purple-mate: #240b36;
+    --color-chicago-red:#FF0000;
+    --color-black-mate:#0f0500;
+    --color-yellow: rgb(251, 223, 7);
+    --color-brown: rgb(86, 43, 8);
+
+
+
+
+
+    --color-one: rgb(202, 191, 171);
+    --color-two: rgb(223, 216, 200);
+    --color-three: rgb(65, 68, 75);
+    --color-four: rgb(82, 87, 93);
+
+    --color-five: rgb(34, 87, 122);
+    --color-six: rgb(56, 163, 165);
+    --color-seven: rgb(87, 204, 153);
+    --color-eight: rgb(128, 237, 153);
+    
+
+    --color-nine: rgb(62, 199, 11);
+    --color-ten: rgb(161, 73, 250);
+    
+    --color-twelve: rgb(255, 74, 74);
+
+
+
+    
+    --color-c2: rgba(61, 199, 11, 0.705);
+    --color-mate-black: #1b1b1b;
+    --color-green: rgb(62, 199, 11);
+
+    --gradiant-one: linear-gradient(to right, #78ffd6, #a8ff78); 
+
+    
+}
+ /*  CLASES    */ 
+.martini{
+    background: #FDFC47;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.sin-city{
+    background: #ED213A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.red-planet-color{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+}
+
+.yellowgreen-planet-color{
+
+background: #FDFC47;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.to-the-black{
+    background: rgb(15,5,0);
+    background: linear-gradient(90deg, rgba(15,5,0,1) 23%, rgba(0,0,0,1) 100%);
+}
+
+
+
+
+/*   CLASES COLOR TEXT   */ 
+
+.white-txt{
+    color: #FFFF;
+}
+
+.brown-txt{
+    color: rgb(86, 43, 8);
+}
+
+.orange-txt{
+    color: #f4a563;
+}
+.blue-txt{
+    color: #09018d;
+}
+
+/*  HOVER  COLOR TEXT CLASS    */ 
+
+.hover-green-txt:hover{
+    color: var(--color-green);
+}
+
+.hover-white-txt:hover{
+    color: var(--color-white);
+}
+
+.hover-shadow-white:hover{
+    box-shadow:  0px 0px 20px 2px var(--color-white);
+}
+
+.hover-shadow-green:hover{
+    box-shadow:  0px 0px 20px 2px var(--color-green-transparent);
+}
+
+/*  shadow COLOR TEXT CLASS    */ 
+.shadow-greenwhite-txt{
+    text-shadow: 1px 1px 5px rgb(96, 212, 0), 0 0 10px #00ff15, 0 0 20px #ffff;
+}
+.shadow-green-txt{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #00ff15, 0 0 20px #ffff;
+}
+
+.shadow-white-txt{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #ffffff, 0 0 20px #ffff;
+}
+
+.shadow-white2-txt{
+    text-shadow: 1px 1px 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffff;
+}
+
+.shadow-blue-txt{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+
+}
+
+.shadow-black-txt{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #000, 0 0 20px #ffff;
+
+}
+
+.shadow-redchicago-txt{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #FF0000, 0 0 20px #ffff;
+
+}
+.shadow-yellow-txt{
+    box-shadow: 1px 1px 5px #000, 0 0 10px #00ff15, 0 0 20px #ffff;
+}
+.shadow-brown{
+    box-shadow: 0px 0px 20px 10px var(--color-brown);
+}
+/* SHADOWS */
+ 
+
+.shadow-green{
+    box-shadow: 1px 1px 5px #000, 0 0 10px #00ff15, 0 0 20px #ffff;
+}
+.shadow-green-white{
+    box-shadow: 1px 1px 5px #ffff, 0 0 10px #00ff15, 0 0 20px #ffff;
+}
+
+.shadow-yellow{
+    box-shadow: 1px 1px 5px #000, 0 0 10px #fbff04, 0 0 20px #ffff;
+}
+
+.shadow-white{
+    box-shadow: 1px 1px 5px #000, 0 0 10px #ffffff, 0 0 20px #ffff;
+}
+
+.shadow-blue{
+    box-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #ffff;
+
+}
+
+.shadow-black{
+    box-shadow: 1px 1px 5px #000, 0 0 10px #000, 0 0 20px #ffff;
+
+}

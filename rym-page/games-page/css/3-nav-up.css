@@ -1,0 +1,66 @@
+
+/*  NAV     */ 
+.nav-up{
+    border-radius: 0px 0px 3px 3px;   
+    box-shadow: 0px 0px 20px 10px var(--color-nine);  
+}
+/*  LOGO IZQ NAV     */ 
+.logo-img {
+    border: 2px solid var(--color-white);
+    background-image: url("../img/morty2.png");
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.logo-img:hover {
+    background-image: url("../img/morty.png");
+    box-shadow:  0px 0px 20px 2px var(--color-green);
+}
+/*  NAV ICONOS DER     */ 
+nav .nav-icon{
+    height: 40px;
+    width: 40px;
+}
+
+nav .nav-icon:hover{
+    height: 40px;
+    
+}
+ 
+/*  NAV  DROPDOWN ICONOS    */ 
+.dropdown-menu{
+    background: none;
+}
+
+ /*  CONTENT DROPDOWN     */ 
+.perfil-dropdown-menu{
+    position: absolute;
+    left: -65%;
+    width: 240px;
+    height: 205px;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 20px 10px var(--color-chicago-red); 
+    font-size: 20px;
+    font-weight: bold; 
+    border: 2px solid var(--color-chicago-red);
+}
+ /*  EDIT CONTENT DROPDOWN 2    */ 
+.perfil-dropdown-menu2{
+    left: -135%;
+}
+
+ /*  ITEM DROPDOWN     */ 
+.dropdown-item{
+    border-bottom: 2px solid var(--color-chicago-red);
+}
+
+ /*  CSS DE PNG BRAZO ROBOTICO   */ 
+.perfil-dropdown-menu::before {
+    content: '';
+    display: block;
+    width: 380px;
+    height: 280px;
+    background: url(../img/metal-arm.png) center no-repeat;
+    position: absolute;
+    top: -70px;
+    left:  -5px;
+  }

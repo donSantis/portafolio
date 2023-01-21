@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Containers</title>
+    <title>Listado by Santis</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -15,271 +15,351 @@
         integrity="sha512-EzrsULyNzUc4xnMaqTrB4EpGvudqpetxG/WNjCpG6ZyyAGxeB6OBF9o246+mwx3l/9Cn838iLIcrxpPHTiygAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modal-mazo.css">
-    <link rel="stylesheet" href="css/color-var.css">
-    <link rel="stylesheet" href="css/button-deck.css">
-    <link rel="stylesheet" href="css/char-card.css">
+
+    <!-- CSS VAR COLORS-->
+    <link rel="stylesheet" href="css/1-color-var.css">
+
+    <!-- CSS BODY-->
+    <link rel="stylesheet" href="css/2-body.css">
+
+    <!-- CSS FOOTER HEADER-->
+    <link rel="stylesheet" href="css/3-nav-up.css">
+    <link rel="stylesheet" href="css/5-footer.css">
+
+    <!-- CSS  CONTENT -->
+    <link rel="stylesheet" href="css/4-section-principal.css">
+    <link rel="stylesheet" href="css/6-char-card.css">
+    <link rel="stylesheet" href="css/7-modal-mazo.css">
+    <link rel="stylesheet" href="css/8-button-deck.css">
+
+    <!-- CSS  OWL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+        integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+        integrity="sha512-f28cvdA4Bq3dC9X9wNmSx21rjWI+5piIW/uoc2LuQ67asKxfQjUow2MkcCNcfJiaLrHcGbed1wzYe3dlY4w9gA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!-- Inicio Menu-->
-    <header class="header">
-        <nav class="navbar navbar-expand-md nav-up">
-            <!-- colapsara en md-->
-            <div class="container-fluid d-flex">
-                <!--costado a costado-->
-                <a class="navbar-brand" href="#">
-                    <img class="rounded-circle align-items-center" src="img/morty3.png" alt="logo">
+    <nav>
+        <div class="nav-up martini">
+            <div class="d-flex align-items-center p-2">
+                <!--   CONTAINER DEL ICONO IZQ    -->
+                <div class="col-xl-8 col-6 col-sm-8">
+                    <a class="navbar-brand m-2" href="#">
+                        <img class="rounded-circle align-items-center logo-img" src="img/morty3.png" alt="logo">
+                    </a>
+                </div>
+                <!--   CONTAINER DER    -->
+                <div class="d-flex justify-content-end col-3 col-sm-2 col-xl-2">
+                    <a class="hover-shadow-white" href=" #" role="button" id="dropdownMenuLink1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="nav-icon align-items-center" src="img/avatars1.png" alt="logo">
+                    </a>
+
+                    <div class="dropdown-menu position-absolute mt-4" aria-labelledby="dropdownMenuLink1">
+                        <div class="perfil-dropdown-menu shadow-white-txt text-center ">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center col-3 col-sm-2 col-xl-2">
+                    <a class="hover-shadow-green" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="nav-icon align-items-center" src="img/portal2.png" alt="logo">
+                    </a>
+
+                    <div class="dropdown-menu position-absolute mt-4" aria-labelledby="dropdownMenuLink2">
+                        <div class="perfil-dropdown-menu perfil-dropdown-menu2 shadow-white-txt text-center">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!--
+    <div class="container my-5">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+            <div class="carousel-inner d-flex" id="drop-card">
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <template id="template-card">
+        <div class=" card card-char absolute m-4">
+            <span id="id"></span>
+            <div class="card-status-char text-center rounded-circle"></div>
+            <div id="name" class="card-title-char text-center"></div>
+            <div class="card-status-char text-center rounded-circle">
+                vivo</div>
+            <div class="card-species-char text-center rounded-circle"></div>
+
+            <div class="card-image">
+                <img class="card-img-top">
+            </div>
+            <div class="card-body-char ">
+                <p class="card-title"><strong></strong></p>
+                <p class="card-text"> Status:
+                     
+                </p>
+            </div>
+            <a class="add-deck-btn position-absolute rounded-circle ">
+                <i class="bi bi-plus-circle-fill"></i>
+            </a>
+        </div>
+        
+    </template>
+
+    <template id="template-card">
+        <div class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+            <div class="owl-wrapper-outer">
+                <div class="owl-wrapper" style="width: 3822px; left: 0px; display: block;">
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                    <div class="owl-item" style="width: 273px;">
+                        <div> Your Content </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="owl-controls clickable">
+                <div class="owl-pagination">
+                    <div class="owl-page active"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+       <div class="slide-contenedor">
+        
+        <div class="direcciones">
+            <a href="#" class="atras" onclick="avanzaSlide(-1)">next</a>
+            <a href="#" class="adelante" onclick="avanzaSlide(1)">back</a>
+        </div>
+        <div class="barras">
+            <span class="barra active" onclick="posicionSlide(1)"></span>
+            <span class="barra" onclick="posicionSlide(2)"></span>
+            <span class="barra" onclick="posicionSlide(3)"></span>
+        </div>
+    </div>
+
+    <div class="owl-carousel owl-theme" id="drop-card">
+ 
+    </div>
+-->
+<template id="template-card">
+    <div class="slide mt-3 mb-3" >
+        <div class="card card-char3 absolute m-4" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+            <div id="name" class="card-title-char text-center text-white shadow-black-txt font-30"></div>
+            
+            <div class="card-status-char text-center rounded-circle"></div>
+
+            <div class="card-species-char text-center rounded-circle"></div>
+
+            <div class="card-image">
+                <img class="card-img-top">
+            </div>
+             
+        </div>
+    </div>
+</template>
+
+
+
+    <div class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        <button class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        <div class="slides-container" id="slides-container">
+          <div class="slide"></div>
+        </div>
+      </div>
+
+
+    <footer class="footer-content martini pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left ">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto">
+                    <!-- Content -->
+                    <h5 class="font-30 font-weight-bold brown-txt text-uppercase mt-3 mb-4 ">Footer Content</h5>
+                    <p class="font-20 p-footer white-txt shadow-white-txt">Here you can use rows and columns to organize
+                        your footer content. Lorem ipsum
+                        dolor sit amet,
+                        consectetur
+                        adipisicing elit.</p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase brown-txt mt-3 mb-4">Links1</h5>
+                    <ul class="list-unstyled shadow-white-txt">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase brown-txt mt-3 mb-4">Links2</h5>
+                    <ul class="list-unstyled shadow-white-txt">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase brown-txt mt-3 mb-4">Links3</h5>
+                    <ul class="list-unstyled shadow-white-txt">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <hr>
+        <!-- Call to action -->
+        <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1 blue-txt">Quieres ver mas apps?</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="#!" class="btn btn-danger btn-rounded waves-effect waves-light">Vamos!</a>
+            </li>
+        </ul>
+        <!-- Call to action -->
+        <hr>
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center footer-social-media">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw  mx-1 waves-effect waves-light">
+                    <i class="bi bi-twitter"> </i>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="bi bi-radioactive"></i>
-                </button> <!--  Boton del menu-->
-                <!-- Menu collapse-->
-                <div class="input-group">
-
-                </div>
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="navbar-nav ms-auto m-2 ">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"> perfil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> log</a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <header class="sticky-top">
-
-        <nav class="navbar navbar-expand-md nav-down ">
-            <!-- colapsara en md-->
-            <div class="container-fluid d-flex ">
-                <!--costado a costado-->
-                <!-- Menu collapse-->
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="navbar-nav mx-auto m-2 ">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"> Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index2.html"> Personajes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Capitulos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> menu4</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> menu6</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </nav>
-    </header>
-
-    <main class="container">
-
-
-
-        <section class="content-1 alto-500">
-            <div id="app" class="container containers-char my-5">
-                <h2 class="titulo-container text-center my-4"> Personajes</h2>
-                <input v-model="search" type="search" class="form-control rounded search my-5"
-                    placeholder="Rick Sanch...." aria-label="Search" aria-describedby="search-addon" />
-                <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
-                    <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
-                    <div v-for="i in filterSearch" :key="i.id">
-                        <div class="">
-
-                            <div class=" card card-char absolute m-4">
-                                <span id="id">{{i.id}}</span>
-                                <div class="card-status-char text-center rounded-circle">
-                                    {{i.status}}</div>
-                                <div id="name" class="card-title-char text-center">{{i.name}}</div>
-                                <div class="card-status-char text-center rounded-circle">
-                                    {{i.status}}</div>
-                                <div class="card-species-char text-center rounded-circle">{{i.origin.name}}</div>
-
-                                <div class="card-image">
-                                    <img class="card-img-top" :src="i.image">
-                                </div>
-                                <div class="card-body-char ">
-                                    <p class="card-title"><strong>{{i.name}}</strong></p>
-                                    <p class="card-text"> Status:
-                                        {{i.status}}
-                                    </p>
-                                </div>
-                                <a v-on:click="add3(i.id,1)" class="add-deck-btn position-absolute rounded-circle "><i
-                                        class="bi bi-plus-circle-fill"></i></a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li v-on:click="atras()" class="page-item"><a class="page-link" href="#">Back</a></li>
-                        <li v-on:click="siguiente()" class="page-item"><a class="page-link" href="#">Next</a></li>
-                        <p>{{pages}}</p>
-                    </ul>
-                </nav>
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl " role="document">
-                        <div class="modal-content modal-body-deck">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <div class="modal-body">
-                                <div class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
-                                    <!-- altura 100% , display flex, alinear items al centro, se justidica el contenido al centro, flewap para obligar a los items permanecer en una linea-->
-                                    <div
-                                        class="card-deck h-100 d-flex align-items-center justify-content-center flex-wrap">
-                                        <div v-for="i in items">
-
-                                            <div v-if=" i.stock == 1">
-                                                <div class=" card-modal-margin">
-
-                                                    <div class=" card card-char absolute card-char-modal">
-                                                        <span id="id">{{i.stock}}</span>
-
-                                                        <div id="name" class="modal-card-title-char text-center">
-                                                            {{i.name}}</div>
-                                                        <div class="modal-card-status-char text-center rounded-circle">
-                                                            {{i.status}}</div>
-
-
-                                                        <div class="modal-card-image">
-                                                            <img class="card-img-top" :src="i.image">
-                                                        </div>
-                                                        <div class="modal-card-body-char">
-                                                            <p class="card-title"><strong>{{i.name}}</strong></p>
-                                                            <p class="card-text"> Status:
-                                                                {{i.status}}
-                                                            </p>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div v-else-if=" i.stock ==2">
-                                                <div class=" card-modal-margin">
-                                                    <span class="card-capa-3 card-char-modal"></span>
-                                                    <div class=" card card-char absolute card-char-modal">
-                                                        <span id="id">{{i.stock}}</span>
-
-                                                        <div id="name" class="modal-card-title-char text-center">
-                                                            {{i.name}}</div>
-                                                        <div class="modal-card-status-char text-center rounded-circle">
-                                                            {{i.status}}</div>
-
-                                                        <div class="modal-card-image">
-                                                            <img class="card-img-top" :src="i.image">
-                                                        </div>
-                                                        <div class="modal-card-body-char">
-                                                            <p class="card-title"><strong>{{i.name}}</strong></p>
-                                                            <p class="card-text"> Status:
-                                                                {{i.status}}
-                                                            </p>
-                                                            <div
-                                                                class="qty-modal-char text-center align-items-center rounded-circle">
-                                                                <p class="bold-text text-center modal-text-qty">
-                                                                    X{{i.stock}}</p>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div v-else>
-                                                <div class=" card-modal-margin">
-                                                    <span class="card-capa-2 card-char-modal"></span>
-                                                    <span class="card-capa-3 card-char-modal"></span>
-                                                    <div class=" card card-char absolute card-char-modal">
-                                                        <span id="id">{{i.stock}}</span>
-
-                                                        <div id="name" class="modal-card-title-char text-center">
-                                                            {{i.name}}</div>
-                                                        <div class="modal-card-status-char text-center rounded-circle">
-                                                            {{i.status}}</div>
-
-                                                        <div class="modal-card-image">
-                                                            <img class="card-img-top" :src="i.image">
-                                                        </div>
-                                                        <div class="modal-card-body-char">
-                                                            <p class="card-title"><strong>{{i.name}}</strong></p>
-                                                            <p class="card-text"> Status:
-                                                                {{i.status}}
-                                                            </p>
-                                                            <div
-                                                                class="qty-modal-char text-center align-items-center rounded-circle">
-                                                                <p class="bold-text text-center modal-text-qty">
-                                                                    X{{i.stock}}</p>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <button v-on:click="clear()" id="next-button">Clear all</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary  button-deck " data-toggle="modal"
-                    data-target="#exampleModal"> <span> {{totalCardDeckvar}}</span></button>
-            </div>
-        </section>
-        <section class="content-4 alto-500">
-            <div class="container " id="app3">
-                <div class="menu">
-                    <div id="store-container">
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <aside class="sidebar">
-            <p>Lorem ipsum dolor sit amet.</p>
-        </aside>
-    </main>
-
-    <footer class="footer">
-        <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1 waves-effect waves-light">
+                    <i class="bi bi-google"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1 waves-effect waves-light">
+                    <i class="bi bi-linkedin"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating   mx-1 waves-effect waves-light">
+                    <i class="bi bi-whatsapp"> </i>
+                </a>
+            </li>
+        </ul>
+        <!-- Social buttons -->
+        <!-- Copyright -->
+        <div class="text-center py-3 copyright">© 2022 Copyright:
+            <a href="/">https://github.com/donSantis</a>
+        </div>
+        <!-- Copyright -->
     </footer>
+    <!-- JS   JQUERY-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/vanillajs2.js"></script>
-    <script src="js/vanillajs3.js"></script>
+
+    <!-- JS   OWL-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+        integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="js/1-menu.js"></script>
+
+    <script src="js/2-app.js"></script>
 
 </body>
 

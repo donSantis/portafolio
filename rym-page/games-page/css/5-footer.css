@@ -1,0 +1,22 @@
+.footer-content{
+    box-shadow: 0px 0px 20px 10px var(--color-nine);  
+    border-radius: 3px 3px 0px 0px ;   
+    font-size: 20px;
+}
+
+ 
+.footer-content a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+ 
+.footer-social-media a{
+    text-decoration: none;
+    color: #09018d;
+}
+.copyright a{
+    color: #ff7300;
+}
+
+
+ 
