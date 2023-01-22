@@ -182,36 +182,50 @@
  
     </div>
 -->
-<template id="template-card">
-    <div class="slide mt-3 mb-3" >
-        <div class="card card-char3 absolute m-4" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-            <div id="name" class="card-title-char text-center text-white shadow-black-txt font-30"></div>
-            
-            <div class="card-status-char text-center rounded-circle"></div>
+    <template id="template-card">
+        <div class="slide mt-3 mb-3">
+            <div class="card card-char-base card-char3 absolute m-4" onmouseover="bigImg(this)"
+                onmouseout="normalImg(this)">
+                <div id="name" class="card-title-char text-center text-white shadow-black-txt font-30"></div>
 
-            <div class="card-species-char text-center rounded-circle"></div>
+                <div class="card-status-char"></div>
+                <div class="card-data-panel">
+                    <a class="white-txt shadow-blue-txt d-flex card-data-title specie-title">Especie: <p>&nbsp</p>
+                        <p class="white-txt shadow-blue-txt specie-description">Human</p>
+                    </a>
+                    <a class="white-txt shadow-blue-txt d-flex card-data-title gender-title">Genero: <p>&nbsp</p>
+                        <p class="white-txt shadow-blue-txt gender-description">Macho</p>
+                    </a>
+                    <a class="white-txt shadow-blue-txt d-flex card-data-title ubication-title">Ubicacion: <p>&nbsp</p>
+                        <p class="white-txt shadow-blue-txt ubication-description">Human con alas</p>
+                    </a>
+                    <a class="white-txt shadow-blue-txt d-flex card-data-title location-title">Locacion: <p>&nbsp</p>
+                        <p class="white-txt shadow-blue-txt location-description">Interdimensional Cable</p>
+                    </a>
+                </div>
+                <div class="card-species-char text-center"></div>
 
-            <div class="card-image">
-                <img class="card-img-top">
+                <div class="card-image">
+                    <img class="card-img-top">
+                </div>
+
             </div>
-             
         </div>
-    </div>
-</template>
+    </template>
 
 
 
     <div class="slider-wrapper">
         <button class="slide-arrow" id="slide-arrow-prev">
-          &#8249;
+            &#8249;
         </button>
         <button class="slide-arrow" id="slide-arrow-next">
-          &#8250;
+            &#8250;
         </button>
         <div class="slides-container" id="slides-container">
-          <div class="slide"></div>
+            <div class="slide"></div>
         </div>
-      </div>
+    </div>
 
 
     <footer class="footer-content martini pt-4">

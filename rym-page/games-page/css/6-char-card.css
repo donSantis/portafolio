@@ -1,79 +1,66 @@
-.card-char3{
-    height: 235px;
-    width: 300px;
+/*   CLASE BASE DE LAS TARJETAS   */
+
+.card-char-base {
     border-radius: 50% / 5%;
     position: relative;
     margin: 10px;
     background-image: url("../img/card365.png");
     background-color: var(--color-five);
-    filter: brightness(90%)!important;
     transition: 0.5s ease;
-    z-index: 5;
-    box-shadow: 5px 10px 40px var(--color-ten);
-}
-.card-char3 .card-img-top{
-    height: 100px;
-    width: 100px;
-    -webkit-transition: all 0.5s 0s ease;
-    -moz-transition: all 0.5s 0s ease;
-    -o-transition: all 0.5s 0s ease;
-    transition: all 0.5s 0s ease;
+    z-index: 2;
+    box-shadow: 5px 10px 40px var(--color-brown);
 }
 
-.card-char3 .card-image{
+/*   CLASE CUSTOM DE LAS TARJETAS   */
+.card-char3 {
+    height: 235px;
+    width: 300px;
+    filter: brightness(40%);
+}
+
+.card-char4 {
+    height: 465px;
+    width: 300px;
+    filter: brightness(90%);
+    z-index: 3;
+    box-shadow: 5px 10px 40px var(--color-yellow);
+}
+
+/*   CLASE BASE DEL CONTENEDOR DE LA IMAGEN TARJETA   */
+.card-image {
     position: absolute;
     left: 90px;
     top: 10px;
     margin: 40px 10px 10px 10px;
-    
     shape-outside: circle(50%);
     -webkit-transition: all 0.5s 0s ease;
--moz-transition: all 0.5s 0s ease;
--o-transition: all 1s 0s ease;
-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 1s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+/*   CLASE CUSTOM DEL CONTENEDOR DE LA IMAGEN TARJETA   */
+.card-char3 .card-image {
+    left: 90px;
+    top: 10px;
+}
+
+.card-char4 .card-image {
+    left: 39px;
+    top: 19px;
+    box-shadow: 5px 10px 40px var(--color-white);
 }
 
 
-
-.card-char4{
-    height: 465px;
-    width: 300px;
-    border-radius: 50% / 5%;
-    position: relative;
-    margin: 10px;
-    background-image: url("../img/card365.png");
-    background-color: var(--color-five);
-    filter: brightness(90%)!important;
-    transition: 0.5s ease;
-    z-index: 5;
-    box-shadow: 5px 10px 40px var(--color-ten);
-}
-.card-char4:hover{
+.card-char4:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
     transition: 1s ease;
-    box-shadow: 5px 10px 40px var(--color-ten);
-    z-index: 14;
-
-}
- 
-
-.card-char4 .card-image{
-    position: absolute;
-    left: 39px;
-    top: 19px;
-    box-shadow: 5px 10px 40px var(--color-white);
-    margin: 40px 10px 10px 10px;
-    shape-outside: circle(50%);
-    -webkit-transition: all 0.5s 0s ease;
-    -moz-transition: all 0.5s 0s ease;
-    -o-transition: all 0.5s 0s ease;
-    transition: all 0.5s 0s ease;
 }
 
-
-.card-img-top{
+/*CLASE BASE DE LA IMAGEN TARJETA   */
+.card-img-top {
     height: 200px;
     width: 200px;
     -webkit-transition: all 0.5s 0s ease;
@@ -82,7 +69,17 @@ transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
 }
 
-.card-title-char{
+/*   CLASE CUSTOM DE LA IMAGEN TARJETA   */
+.card-char3 .card-img-top {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+/*CLASE BASE DEL NOMBRE TARJETA   */
+
+.card-title-char {
     position: absolute;
     height: 30px;
     width: 225px;
@@ -91,48 +88,102 @@ transition: all 0.5s 0s ease;
     color: var(--letter-white);
 }
 
-.card-char4 .card-status-char{
-    background-color: #67f15a;
+
+
+/*CLASE BASE DEL STATUS TARJETA   */
+
+.card-status-char {
     position: absolute;
     height: 50px;
     width: 50px;
     top: 11px;
     left: 3%;
-    color: var(--letter-white);
-    content: "vivo";
+    color: var(--color-white);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.card-char4 .card-status-char {
+    background-color: #67f15a;
     box-shadow: 5px 10px 40px var(--color-green);
 }
-.card-status-char2{
-    background-color: #ff0000;
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: 11px;
-    left: 3%;
-    color: var(--letter-white);
-    content: "muertos";
+
+/*   CLASE CUSTOM DEL STATUS TARJETA   */
+.card-char4 .card-status-char2 {
+    background-color: var(--color-chicago-red);
+    box-shadow: 5px 10px 40px var(--color-chicago-red);
 }
 
+.card-char3 .card-status-char {
+    display: none;
+}
 
+/*CLASE BASE DE LA BARRA DANGER TARJETA   */
 
-.card-char4 .card-species-char{
-    background-color: #98741c;
+.card-species-char {
+    background-repeat: no-repeat;
+    background-position: center center;
     position: absolute;
-    height: 60px;
+    height: 30px;
     width: 250px;
-    bottom: 10px;
-    left: 8%;
     color: var(--letter-white);
+    clip-path: polygon(50% 0, 100% 25%, 100% 100%, 0 100%, 0 25%);
+    transition: 1s ease;
+}
+
+/*   CLASE CUSTOM DE LA BARRA DANGER TARJETA   */
+.card-char4 .card-species-char {
+    background-image: url("../img/textura-danger2.jpg");
+    width: 250px;
+    bottom: 7%;
+    left: 8.5%;
     box-shadow: 0px 0px 20px var(--color-yellow);
 }
 
-.card-species-char{
-    background-color: #98741c;
-    position: absolute;
-    height: 60px;
-    width: 250px;
-    bottom: 10px;
-    left: 8%;
-    color: var(--letter-white);
+.card-char3 .card-species-char {
+    background-image: url("../img/textura-danger4.jpg");
+    width: 200px;
+    bottom: 5%;
+    left: 16.5%;
 }
 
+/*CLASE BASE DEL DATA PANEL TARJETA   */
+
+.card-data-panel {
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    height: 110px;
+    width: 250px;
+    color: var(--letter-white);
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+    background-image: url("../img/panel-prime.png");
+}
+
+/*   CLASE CUSTOM DEL DATA PANEL TARJETA   */
+.card-char4 .card-data-panel {
+    width: 250px;
+    bottom: 15%;
+    left: 8.5%;
+    box-shadow: 0px 0px 20px var(--color-blue);
+    transition: max-height 0.15s ease-out;
+}
+
+.card-char3 .card-data-panel {
+    display: none;
+}
+
+
+.card-data-panel .card-data-title {
+    height: 20px;
+    margin: 3px 0px 3px 14px;
+}
+
+.card-data-panel a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
