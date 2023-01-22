@@ -101,11 +101,15 @@
     color: var(--color-white);
     border-radius: 50%;
     text-align: center;
-}
-
-.card-char4 .card-status-char {
     background-color: #67f15a;
     box-shadow: 5px 10px 40px var(--color-green);
+}
+
+.card-status-char p {
+    position: absolute;
+    font-size: 20px;
+    top: 25%;
+    left: 32%;
 }
 
 /*   CLASE CUSTOM DEL STATUS TARJETA   */
@@ -153,15 +157,25 @@
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
+    height: 0px;
+    width: 0px;
+    color: var(--letter-white);
+    background-image: url("../img/panel-prime.png"); 
+}
+
+#hideMeAfter5Seconds {
+    animation: showAnimation 0s ease-out 0.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
     height: 110px;
     width: 250px;
-    color: var(--letter-white);
-    -webkit-transition: all 0.5s 0s ease;
-    -moz-transition: all 0.5s 0s ease;
-    -o-transition: all 0.5s 0s ease;
-    transition: all 0.5s 0s ease;
-    background-image: url("../img/panel-prime.png");
-}
+  }
+  
+  @keyframes showAnimation {
+    to {
+      visibility: visible;
+    }
+  }
 
 /*   CLASE CUSTOM DEL DATA PANEL TARJETA   */
 .card-char4 .card-data-panel {

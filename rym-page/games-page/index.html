@@ -182,14 +182,22 @@
  
     </div>
 -->
+ 
     <template id="template-card">
-        <div class="slide mt-3 mb-3">
+        <div class="slide d-flex justify-content-center mt-3 mb-3">
             <div class="card card-char-base card-char3 absolute m-4" onmouseover="bigImg(this)"
                 onmouseout="normalImg(this)">
-                <div id="name" class="card-title-char text-center text-white shadow-black-txt font-30"></div>
+                <div class="card-title-char text-center text-white shadow-black-txt font-30"> <a id="name"></a> </div>
 
-                <div class="card-status-char"></div>
-                <div class="card-data-panel">
+                <div class="card-status-char circle-status">
+                    <p> <i class="bi bi-heart-pulse-fill"></i> </p>
+                </div>
+
+                <div class="card-status-char2 circle-status">
+                    <p> <i class="bi bi-wifi-off"></i> </p>
+                </div>
+
+                <div class="card-data-panel" id="hideMeAfter5Seconds">
                     <a class="white-txt shadow-blue-txt d-flex card-data-title specie-title">Especie: <p>&nbsp</p>
                         <p class="white-txt shadow-blue-txt specie-description">Human</p>
                     </a>
@@ -214,15 +222,16 @@
     </template>
 
 
-
-    <div class="slider-wrapper">
-        <button class="slide-arrow" id="slide-arrow-prev">
-            &#8249;
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <div class="slider-wrapper d-flex justify-content-center">
+        
+        <button class="slide-arrow d-flex justify-content-center" id="slide-arrow-prev">
+            <p class="d-flex justify-content-center">&#8249;</p>
         </button>
-        <button class="slide-arrow" id="slide-arrow-next">
-            &#8250;
+        <button class="slide-arrow d-flex justify-content-center" id="slide-arrow-next">
+            <p class="d-flex justify-content-center"> &#8250;</p>
         </button>
-        <div class="slides-container" id="slides-container">
+        <div class="slides-container " id="slides-container">
             <div class="slide"></div>
         </div>
     </div>
