@@ -46,12 +46,28 @@ body {
 }
 
 .slides-container {
+  position: relative;
   width: 90%;
   display: flex;
   overflow: scroll;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /*overflow-x: hidden; 
+  overflow-y: hidden;*/
 }
+/* OCULTAR BARRAS PARA CRHOME  */
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slides-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.slides-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 
 .slide-arrow {
   position: absolute;

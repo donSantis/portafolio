@@ -184,7 +184,7 @@
 -->
  
     <template id="template-card">
-        <div class="slide d-flex justify-content-center mt-3 mb-3">
+        <div class="slide  justify-content-center mt-3 mb-3">
             <div class="card card-char-base card-char3 absolute m-4" onmouseover="bigImg(this)"
                 onmouseout="normalImg(this)">
                 <div class="card-title-char text-center text-white shadow-black-txt font-30"> <a id="name"></a> </div>
@@ -223,7 +223,7 @@
 
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-    <div class="slider-wrapper d-flex justify-content-center">
+    <div class="slider-wrapper d-flex justify-content-center" data-spy="scroll" data-target="#slides-container">
         
         <button class="slide-arrow d-flex justify-content-center" id="slide-arrow-prev">
             <p class="d-flex justify-content-center">&#8249;</p>
@@ -231,11 +231,10 @@
         <button class="slide-arrow d-flex justify-content-center" id="slide-arrow-next">
             <p class="d-flex justify-content-center"> &#8250;</p>
         </button>
-        <div class="slides-container " id="slides-container">
-            <div class="slide"></div>
+        <div class="slides-container"  id="slides-container">
+            
         </div>
     </div>
-
 
     <footer class="footer-content martini pt-4">
         <!-- Footer Links -->

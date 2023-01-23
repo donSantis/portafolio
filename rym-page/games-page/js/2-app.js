@@ -1,7 +1,9 @@
 $(document).ready(function () {
   getAll2();
 });
- 
+
+
+
 function getAll() {
   function getAllId(id) {
     $.ajax({
@@ -51,8 +53,9 @@ function createCard(data) {
 
   data.results.forEach((item) => {
     // console.log(item.status);
-    const loca = item.location.name;
+    const loca = 'card-' + item.id;
     const clone = templateCard.cloneNode(true);
+
 
 
     if (item.status == 'Alive') {
@@ -63,7 +66,7 @@ function createCard(data) {
       clone.querySelector(".card-status-char2").className = 'card-status-char card-status-char2  ';
       clone.querySelector(".card-status-char").className = 'd-none';
     }
-
+    clone.querySelector(".slide").setAttribute('id', loca);
     clone.querySelector(".card-title-char").textContent = item.name.substring(0, 15);
     clone.querySelector(".card-img-top").setAttribute("src", item.image);
 
@@ -76,36 +79,41 @@ function createCard(data) {
     fragment.appendChild(clone);
   });
   cardSide.appendChild(fragment);
+  createSlider();
+
+
 };
 
 
 
 // SLIDER 
 
-const slidesContainer = document.getElementById("slides-container");
-const slide = document.querySelector(".slide");
+function createSlider() {
+  const slidesContainer = document.getElementById("slides-container");
+  const slide = document.querySelector(".slide");
 
-const prevButton = document.getElementById("slide-arrow-prev");
-const nextButton = document.getElementById("slide-arrow-next");
+  const prevButton = document.getElementById("slide-arrow-prev");
+  const nextButton = document.getElementById("slide-arrow-next");
 
-function next() {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
+  function next() {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
+  }
+  function back() {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+  }
+
+  nextButton.addEventListener("click", () => {
+    next();
+  });
+  prevButton.addEventListener("click", () => {
+    back();
+  });
+
 }
-function back() {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
-}
-
-nextButton.addEventListener("click", () => {
-  next();
-});
-prevButton.addEventListener("click", () => {
-  back();
-});
 
 //setInterval(next, 5000);
-
 
 function bigImg(x) {
   x.className = 'card card-char-base card-char4 absolute m-4';
@@ -130,42 +138,46 @@ function myFunction3() {
 
   for (i = 0; i < li.length; i++) {
 
-      //console.log(li.length);
-      a = li[i].getElementsByTagName("a");
-      console.log(a);
+    //console.log(li.length);
+    a = li[i].getElementsByTagName("a");
+    console.log(a);
 
 
-      txtValue = a.textContent;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-      } else {
-          li[i].style.display = "none";
-      }
+    txtValue = a.textContent;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
 
   }
 }
 function myFunction() {
   let input = document.getElementById('myInput').value;
-   
-  input=input.toLowerCase();
+  input = input.toLowerCase();
   //console.log(input);
-  let y = document.getElementsByClassName('slide');
+  let s = document.getElementsByClassName('slide');
   let x = document.getElementsByClassName('card-char-base');
-  console.log(x);
-  for (i = 0; i < x.length; i++) { 
-      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+  //  console.log(x);
+  //  console.log(s);
+  for (i = 0; i < x.length; i++) {
 
-        y[i].style.display="list-item";
-        x[i].style.display="list-item";
-      }
-      else {
-      
-        y[i].style.display="list-item";
-        x[i].style.display="list-item";
-      }
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      console.log(x[i].innerHTML.toLowerCase().includes(input) + ' = falso');
+      // x[i].style.display = "none";
+   //   x[i].style.display = "none";
+      s[i].style.display = "none";
+      console.log(s[i]);
+
+    }
+    else {
+      // console.log(s[i]);
+      s[i].style.display = "list-item";
+      console.log(x[i].innerHTML.toLowerCase().includes(input) + ' = verdadero');
+      //   let idSlide = document.querySelector('#slide-'+i);
+      //   console.log(idSlide);
+    }
   }
-
-  
 }
 function myFunction2() {
   var input, filter, ul, li, a, i, txtValue;
@@ -174,13 +186,13 @@ function myFunction2() {
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName("li");
   for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      console.log(a);
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-      } else {
-          li[i].style.display = "none";
-      }
+    a = li[i].getElementsByTagName("a")[0];
+    console.log(a);
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
   }
 }
