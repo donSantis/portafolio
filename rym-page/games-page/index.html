@@ -86,105 +86,36 @@
         </div>
 
     </nav>
-    <!--
-    <div class="container my-5">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
-            <div class="carousel-inner d-flex" id="drop-card">
+
+    <div class="container-fluid my-5">
+        <div class="container input-group mb-3 search">
+            <input type="text" class="form-control" id="search-bar" placeholder="Buscar Personaje..."
+                aria-label="Buscar Personaje..." aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary white-txt font-20 search-button martini" type="button"
+                    id="search-button"><i class="bi bi-search"></i></button>
             </div>
-            
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        </div>
+
+        <div class="slider-wrapper d-flex justify-content-center">
+            <button class="slide-arrow " id="slide-arrow-prev">
+                <p class="d-flex justify-content-center">&#8249;</p>
+            </button>
+            <button class="slide-arrow " id="slide-arrow-next">
+                <p class="d-flex justify-content-center"> &#8250;</p>
+            </button>
+            <div class="slides-container" id="slides-container">
+            </div>
+        </div>
+        <div class="pagination container d-flex justify-content-center">
+            <button class="yellowgreen-planet-color mr-auto col-2 btn-base-page shadow-green-txt" id="backPage">Anterior</button>
+            <div class="col-8 mr-auto ml-auto"></div>
+            <button class="yellowgreen-planet-color ml-auto col-2 btn-base-page shadow-green-txt" id="nextPage">Siguiente</button>
         </div>
     </div>
 
     <template id="template-card">
-        <div class=" card card-char absolute m-4">
-            <span id="id"></span>
-            <div class="card-status-char text-center rounded-circle"></div>
-            <div id="name" class="card-title-char text-center"></div>
-            <div class="card-status-char text-center rounded-circle">
-                vivo</div>
-            <div class="card-species-char text-center rounded-circle"></div>
-
-            <div class="card-image">
-                <img class="card-img-top">
-            </div>
-            <div class="card-body-char ">
-                <p class="card-title"><strong></strong></p>
-                <p class="card-text"> Status:
-                     
-                </p>
-            </div>
-            <a class="add-deck-btn position-absolute rounded-circle ">
-                <i class="bi bi-plus-circle-fill"></i>
-            </a>
-        </div>
-        
-    </template>
-
-    <template id="template-card">
-        <div class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-            <div class="owl-wrapper-outer">
-                <div class="owl-wrapper" style="width: 3822px; left: 0px; display: block;">
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                    <div class="owl-item" style="width: 273px;">
-                        <div> Your Content </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="owl-controls clickable">
-                <div class="owl-pagination">
-                    <div class="owl-page active"><span class=""></span></div>
-                    <div class="owl-page"><span class=""></span></div>
-                </div>
-            </div>
-        </div>
-    </template>
-
-       <div class="slide-contenedor">
-        
-        <div class="direcciones">
-            <a href="#" class="atras" onclick="avanzaSlide(-1)">next</a>
-            <a href="#" class="adelante" onclick="avanzaSlide(1)">back</a>
-        </div>
-        <div class="barras">
-            <span class="barra active" onclick="posicionSlide(1)"></span>
-            <span class="barra" onclick="posicionSlide(2)"></span>
-            <span class="barra" onclick="posicionSlide(3)"></span>
-        </div>
-    </div>
-
-    <div class="owl-carousel owl-theme" id="drop-card">
- 
-    </div>
--->
- 
-    <template id="template-card">
-        <div class="slide  justify-content-center mt-3 mb-3">
+        <div class="slide justify-content-center mt-3 mb-3">
             <div class="card card-char-base card-char3 absolute m-4" onmouseover="bigImg(this)"
                 onmouseout="normalImg(this)">
                 <div class="card-title-char text-center text-white shadow-black-txt font-30"> <a id="name"></a> </div>
@@ -220,21 +151,6 @@
             </div>
         </div>
     </template>
-
-
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-    <div class="slider-wrapper d-flex justify-content-center" data-spy="scroll" data-target="#slides-container">
-        
-        <button class="slide-arrow d-flex justify-content-center" id="slide-arrow-prev">
-            <p class="d-flex justify-content-center">&#8249;</p>
-        </button>
-        <button class="slide-arrow d-flex justify-content-center" id="slide-arrow-next">
-            <p class="d-flex justify-content-center"> &#8250;</p>
-        </button>
-        <div class="slides-container"  id="slides-container">
-            
-        </div>
-    </div>
 
     <footer class="footer-content martini pt-4">
         <!-- Footer Links -->
@@ -378,10 +294,8 @@
         integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
-    <script src="js/1-menu.js"></script>
-
     <script src="js/2-app.js"></script>
+
 
 </body>
 

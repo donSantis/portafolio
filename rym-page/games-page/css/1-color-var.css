@@ -175,3 +175,7 @@ background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, F
     box-shadow: 1px 1px 5px #000, 0 0 10px #000, 0 0 20px #ffff;
 
 }
+/* Background */
+.background-blue-txt{
+    background-color: #09018d;
+}

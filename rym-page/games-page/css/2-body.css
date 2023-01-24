@@ -135,3 +135,19 @@ body {
 }
 
  
+ .search #search-button{
+  border-radius: 0% 10% 10% 0%;
+ }
+ .search input:focus{
+  box-shadow: 5px 10px 40px var(--color-green-transparent);
+}
+ .search #search-button:focus{
+    box-shadow: 5px 10px 40px var(--color-green-transparent);
+ }
+
+
+ .btn-base-page{
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+ }

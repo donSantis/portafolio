@@ -1,90 +1,107 @@
 $(document).ready(function () {
-  getAll2();
+  api_request();
 });
 
-
-
-function getAll() {
-  function getAllId(id) {
-    $.ajax({
-      type: "get",
-      url: 'https://rickandmortyapi.com/api/character/?page=' + id,
-      dataType: 'json',
-      data: { request: 'mostrarHorarios' },
-      success: function (data) {//success
-        // console.log(data);
-        createCard(data);
-        // muestraSlides(data.results.length);
-      }, fail: function (data) {
-        console.log("fail all city");
-      },
-    });
-  }
-  for (let i = 1; i < 21; i++) {
-    getAllId(i);
-  }
-
-}
-function getAll2() {
-
-  $.ajax({
-    type: "get",
-    url: 'https://rickandmortyapi.com/api/character',
-    dataType: 'json',
-    data: { request: 'mostrarHorarios' },
-    success: function (data) {//success
-      // console.log(data);
-      createCard(data);
-      // muestraSlides(data.results.length);
-    }, fail: function (data) {
-      console.log("fail all city");
-    },
-  });
-  //  for (let i = 1; i < 21; i++) {
-  //  getAllId(i);
-  //}
-
-}
-function createCard(data) {
-  var position = 0;
-  var cardSide = document.querySelector("#slides-container");
-  const templateCard = document.getElementById("template-card").content;
-  const fragment = document.createDocumentFragment();
-
-  data.results.forEach((item) => {
-    // console.log(item.status);
-    const loca = 'card-' + item.id;
-    const clone = templateCard.cloneNode(true);
-
-
-
-    if (item.status == 'Alive') {
-      clone.querySelector(".card-status-char").className = 'card-status-char';
-      clone.querySelector(".card-status-char2").className = 'd-none';
-    }
-    else {
-      clone.querySelector(".card-status-char2").className = 'card-status-char card-status-char2  ';
-      clone.querySelector(".card-status-char").className = 'd-none';
-    }
-    clone.querySelector(".slide").setAttribute('id', loca);
-    clone.querySelector(".card-title-char").textContent = item.name.substring(0, 15);
-    clone.querySelector(".card-img-top").setAttribute("src", item.image);
-
-
-    clone.querySelector(".specie-description").textContent = item.species;
-    clone.querySelector(".gender-description").textContent = item.gender;
-    clone.querySelector(".ubication-description").textContent = item.location.name.substring(0, 17);
-    clone.querySelector(".location-description").textContent = item.origin.name.substring(0, 18);
-    // guardamos en el fragment para evitar el reflow
-    fragment.appendChild(clone);
-  });
-  cardSide.appendChild(fragment);
-  createSlider();
-
-
+const API = {
+  "characters": "https://rickandmortyapi.com/api/character/",
+  "locations": "https://rickandmortyapi.com/api/location/",
+  "episodes": "https://rickandmortyapi.com/api/episode/"
 };
 
+const charactersPerPage = 6;
 
+let queryData = '';
+let page = 1;
+
+let next = null;
+let back = null;
+
+$('#nextPage').hide();
+$('#backPage').hide();
+
+$('#search-button').on('click', () => {
+  queryData = $('#search-bar').val();
+  $('#search-bar').val('');
+  page = 1;
+  api_request(API.characters, {
+    page: page,
+    name: queryData
+  });
+});
+
+/* NEXT BUTTON */
+$('#nextPage').on('click', () => {
+  api_request(API.characters, {
+    page: ++page,
+    name: queryData
+  });
+});
+
+/* BACK BUTTON */
+$('#backPage').on('click', () => {
+  api_request(API.characters, {
+    page: --page,
+    name: queryData
+  });
+});
+
+function api_request(url, data = {}) {
+  $.get({
+    url: API.characters,
+    data: data,
+    success: (res) => {
+      /* LIMPIAR SCREEN */
+      $('#slides-container').html('');
+      /* DATOS EN CONSOLA */
+      //console.log(res);
+      next = res.info.next || null;
+
+      // console.log(next);
+      back = res.info.prev || null;
+      var cardSide = document.querySelector("#slides-container");
+      const templateCard = document.getElementById("template-card").content;
+      const fragment = document.createDocumentFragment();
+
+      for (let [key, value] of Object.entries(res.results)) {
+
+        
+        const clone = templateCard.cloneNode(true);
+        clone.querySelector(".card-title-char").textContent = value.name.substring(0, 15);
+
+        if (value.status == 'Alive') {
+          clone.querySelector(".card-status-char").className = 'card-status-char';
+          clone.querySelector(".card-status-char2").className = 'd-none';
+        }
+        else {
+          clone.querySelector(".card-status-char2").className = 'card-status-char card-status-char2  ';
+          clone.querySelector(".card-status-char").className = 'd-none';
+        }
+        clone.querySelector(".slide").setAttribute('id', value.id);
+        clone.querySelector(".card-title-char").textContent = value.name.substring(0, 15);
+        clone.querySelector(".card-img-top").setAttribute("src", value.image);
+    
+    
+        clone.querySelector(".specie-description").textContent = value.species;
+        clone.querySelector(".gender-description").textContent = value.gender;
+        clone.querySelector(".ubication-description").textContent = value.location.name.substring(0, 17);
+        clone.querySelector(".location-description").textContent = value.origin.name.substring(0, 18);
+        fragment.appendChild(clone);
+        
+
+      }
+
+      cardSide.appendChild(fragment);
+      createSlider();
+
+      if (next !== null) $('#nextPage').show();
+      else $('#nextPage').hide();
+      if (back !== null) $('#backPage').show();
+      else $('#backPage').hide();
+
+      $('html').scrollTop(0);
+    }
+  })
+}
 
 // SLIDER 
 
@@ -95,25 +112,23 @@ function createSlider() {
   const prevButton = document.getElementById("slide-arrow-prev");
   const nextButton = document.getElementById("slide-arrow-next");
 
-  function next() {
+  function nextSlider() {
     const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft += slideWidth;
   }
-  function back() {
+  function backSlider() {
     const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft -= slideWidth;
   }
 
   nextButton.addEventListener("click", () => {
-    next();
+    nextSlider();
   });
   prevButton.addEventListener("click", () => {
-    back();
+    backSlider();
   });
 
 }
-
-//setInterval(next, 5000);
 
 function bigImg(x) {
   x.className = 'card card-char-base card-char4 absolute m-4';
@@ -123,76 +138,6 @@ function normalImg(x) {
   x.className = 'card card-char-base card-char3 absolute m-4';
 }
 
+ 
 
-
-
-function myFunction3() {
-  var input, filter, ul, li, a, i, txtValue;
-
-  input = document.getElementById("myInput");
-  //console.log(input.value);
-  filter = input.value.toUpperCase();
-
-  ul = document.getElementById("slides-container");
-  li = ul.getElementsByClassName("slide");
-
-  for (i = 0; i < li.length; i++) {
-
-    //console.log(li.length);
-    a = li[i].getElementsByTagName("a");
-    console.log(a);
-
-
-    txtValue = a.textContent;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-
-  }
-}
-function myFunction() {
-  let input = document.getElementById('myInput').value;
-  input = input.toLowerCase();
-  //console.log(input);
-  let s = document.getElementsByClassName('slide');
-  let x = document.getElementsByClassName('card-char-base');
-  //  console.log(x);
-  //  console.log(s);
-  for (i = 0; i < x.length; i++) {
-
-    if (!x[i].innerHTML.toLowerCase().includes(input)) {
-      console.log(x[i].innerHTML.toLowerCase().includes(input) + ' = falso');
-      // x[i].style.display = "none";
-   //   x[i].style.display = "none";
-      s[i].style.display = "none";
-      console.log(s[i]);
-
-    }
-    else {
-      // console.log(s[i]);
-      s[i].style.display = "list-item";
-      console.log(x[i].innerHTML.toLowerCase().includes(input) + ' = verdadero');
-      //   let idSlide = document.querySelector('#slide-'+i);
-      //   console.log(idSlide);
-    }
-  }
-}
-function myFunction2() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    console.log(a);
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
+ 
