@@ -1,4 +1,105 @@
-.section-principal{
-    height: 600px;
-    background-color: red;
+ /*  CONTENEDOR PADRE SLIDER*/
+ .slider-wrapper {
+     margin: 1rem;
+     position: relative;
+     overflow: hidden;
+
+ }
+
+ /* CONTENEDOR PRINCIPAL SLIDER */
+ .slides-container {
+     position: relative;
+     width: 90%;
+     display: flex;
+     overflow: scroll;
+     /*overflow-x: hidden; 
+    overflow-y: hidden;*/
+ }
+
+ /* OCULTAR BARRAS PARA CRHOME  */
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .slides-container::-webkit-scrollbar {
+     display: none;
+ }
+
+ /* Hide scrollbar for IE, Edge and Firefox */
+ .slides-container {
+     -ms-overflow-style: none;
+     /* IE and Edge */
+     scrollbar-width: none;
+     /* Firefox */
+ }
+
+
+ /* FLECHAS CAROUSEL/ SLIDER */
+
+ .slide-arrow {
+     position: absolute;
+     display: flex;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     height: 4rem;
+     background-color: white;
+     border: none;
+     width: 2rem;
+     font-size: 3rem;
+     padding: 0;
+     cursor: pointer;
+     opacity: 0.5;
+     transition: opacity 100ms;
+ }
+
+ .slide-arrow:hover,
+ .slide-arrow:focus {
+     opacity: 1;
+ }
+
+ .slide-arrow p {
+     position: absolute;
+     top: -5px;
+ }
+
+ #slide-arrow-prev {
+     left: 0;
+     padding-left: 0.25rem;
+     border-radius: 0 2rem 2rem 0;
+     z-index: 5;
+ }
+
+ #slide-arrow-next {
+     right: 0;
+     padding-left: 0.75rem;
+     border-radius: 2rem 0 0 2rem;
+     z-index: 5;
+ }
+
+
+ /* CONTENEDOR TARJETAS SLIDER*/
+ .slide {
+     width: 100%;
+     height: 50%;
+     flex: 2 0 20%;
+
+ }
+
+ /* BOTON BARRA SEARCH CAROUSEL*/
+ .search #search-button {
+     border-radius: 0% 10% 10% 0%;
+ }
+ .search #search-button:focus {
+    box-shadow: 5px 10px 40px var(--color-green-transparent);
 }
+
+ /* INPUT BARRA SEARCH CAROUSEL*/
+ .search input:focus {
+     box-shadow: 5px 10px 40px var(--color-green-transparent);
+ }
+
+ /* BOTON  CAROUSEL*/
+
+ .btn-base-page {
+     color: var(--color-white);
+     border: 1px solid var(--color-white);
+     border-radius: 10px;
+ }
