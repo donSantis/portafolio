@@ -4,7 +4,7 @@
     border-radius: 50% / 5%;
     position: relative;
     margin: 10px;
-    background-image: url("../img/card365.png");
+    background-image: url("../../img/list-rym/card365.png");
     background-color: var(--color-five);
     transition: 0.5s ease;
     z-index: 2;
@@ -137,7 +137,7 @@
 
 /*   CLASE CUSTOM DE LA BARRA DANGER TARJETA   */
 .card-char4 .card-species-char {
-    background-image: url("../img/textura-danger2.jpg");
+    background-image: url("../../img/list-rym/textura-danger2.jpg");
     width: 250px;
     bottom: 7%;
     left: 8.5%;
@@ -145,7 +145,7 @@
 }
 
 .card-char3 .card-species-char {
-    background-image: url("../img/textura-danger4.jpg");
+    background-image: url("../../img/list-rym/textura-danger4.jpg");
     width: 200px;
     bottom: 5%;
     left: 16.5%;
@@ -160,7 +160,7 @@
     height: 0px;
     width: 0px;
     color: var(--letter-white);
-    background-image: url("../img/panel-prime.png"); 
+    background-image: url("../../img/list-rym/panel-prime.png"); 
 }
 
 #hideMeAfter5Seconds {
